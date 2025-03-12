@@ -16,6 +16,7 @@
     "@progress/kendo-react-intl": "^10.0.0",
     "@progress/kendo-react-layout": "^10.0.0",
     "@progress/kendo-react-pdf": "^10.0.0",
+    "@progress/kendo-react-ripple": "^10.0.0",
     "@progress/kendo-theme-default": "^10.3.1",
     "next": "15.2.1",
     "react": "^19.0.0",

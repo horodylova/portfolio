@@ -1,0 +1,148 @@
+.header {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 0.8rem 2rem;
+  transition: all 0.3s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.scrolled {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 0.5rem 2rem;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.headerLeft {
+  flex: 0 0 auto;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  background: linear-gradient(135deg, #6b73ff 0%, #000dff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+}
+
+.desktopNav {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.navButton {
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border-radius: 4px;
+}
+
+.navButton:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  transform: translateY(-2px);
+}
+
+.contactButton {
+  font-weight: 500;
+  padding: 0.5rem 1.2rem;
+  background: linear-gradient(135deg, #6b73ff 0%, #000dff 100%);
+  color: white;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.contactButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.mobileMenu {
+  display: none;
+}
+
+.burgerButton {
+  font-size: 1.5rem;
+}
+
+.drawer {
+  width: 280px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.drawerHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.drawerLogo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  background: linear-gradient(135deg, #6b73ff 0%, #000dff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.closeButton {
+  font-size: 1.2rem;
+}
+
+.drawerContent {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.drawerItem {
+  width: 100%;
+  justify-content: flex-start;
+  padding: 0.8rem;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.drawerContactButton {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.8rem;
+  background: linear-gradient(135deg, #6b73ff 0%, #000dff 100%);
+  color: white;
+  border: none;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .desktopNav {
+    display: none;
+  }
+
+  .mobileMenu {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+  }
+
+  .header {
+    padding: 0.8rem 1rem;
+  }
+  
+  .scrolled {
+    padding: 0.5rem 1rem;
+  }
+}
+ 
