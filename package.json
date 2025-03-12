@@ -9,8 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@progress/kendo-drawing": "^1.21.2",
+    "@progress/kendo-licensing": "^1.5.1",
+    "@progress/kendo-react-animation": "^10.0.0",
+    "@progress/kendo-react-buttons": "^10.0.0",
+    "@progress/kendo-react-intl": "^10.0.0",
+    "@progress/kendo-react-layout": "^10.0.0",
+    "@progress/kendo-react-pdf": "^10.0.0",
+    "@progress/kendo-theme-default": "^10.3.1",
+    "next": "15.2.1",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "next": "15.2.1"
+    "react-dom": "^19.0.0"
   }
 }
