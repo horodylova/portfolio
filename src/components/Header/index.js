@@ -19,10 +19,10 @@ export default function Header() {
   }, [])
 
   const menuItems = [
-    { text: "About", icon: "user" },
-    { text: "Projects", icon: "folder" },
-    { text: "Skills", icon: "gear" },
-    { text: "Contact", icon: "envelope" }
+    { text: "About" },
+    { text: "Projects" },
+    { text: "Skills" },
+    { text: "Contact" }
   ]
   
   const handleMenuItemClick = () => {
@@ -30,21 +30,23 @@ export default function Header() {
   }
 
   return (
-    <Ripple>
+    <>
       <AppBar className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
-        <AppBarSection className={styles.headerLeft}>
-          <div className={styles.logoContainer}>
-            <span className={styles.logo}>Svitlana Horodylova</span>
-          </div>
-        </AppBarSection>
-
+ <AppBarSection className={styles.headerLeft}>
+  <div className={styles.logoContainer}>
+    <span className={styles.logo}>
+      <span className={styles.firstName}>Svitlana</span>
+      <span className={styles.lastName}>Horodylova</span>
+    </span>
+  </div>
+</AppBarSection>
+ 
         <AppBarSection className={styles.desktopNav}>
           {menuItems.map((item, index) => (
             <Button 
               key={index} 
               look="flat" 
               className={styles.navButton}
-              icon={item.icon}
             >
               {item.text}
             </Button>
@@ -60,30 +62,29 @@ export default function Header() {
 
         <AppBarSection className={styles.mobileMenu}>
           <Button 
-            icon="menu"
+            className={styles.hamburger}
+            onClick={() => setIsDrawerOpen(!isDrawerOpen)}
             look="flat"
-            className={styles.burgerButton}
-            onClick={() => setIsDrawerOpen(true)}
-          />
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </Button>
         </AppBarSection>
       </AppBar>
 
-      <Drawer
-        position="start"
-        mode="overlay"
-        expanded={isDrawerOpen}
-        onClose={() => setIsDrawerOpen(false)}
-        className={styles.drawer}
-      >
-        <DrawerContent>
+      {/* Мобильное меню */}
+      {isDrawerOpen && (
+        <div className={styles.mobileDrawer}>
           <div className={styles.drawerHeader}>
-            <span className={styles.drawerLogo}>Svitlana Horodylova</span>
+            <span className={styles.drawerLogo}>Menu</span>
             <Button 
-              icon="close" 
-              look="flat"
-              onClick={() => setIsDrawerOpen(false)}
               className={styles.closeButton}
-            />
+              onClick={() => setIsDrawerOpen(false)}
+              look="flat"
+            >
+              ×
+            </Button>
           </div>
           <div className={styles.drawerContent}>
             {menuItems.map((item, index) => (
@@ -91,23 +92,21 @@ export default function Header() {
                 key={index} 
                 look="flat" 
                 className={styles.drawerItem}
-                icon={item.icon}
                 onClick={handleMenuItemClick}
               >
                 {item.text}
               </Button>
             ))}
             <Button 
-              look="outline" 
-              rounded="full" 
+              look="primary" 
               className={styles.drawerContactButton}
               onClick={handleMenuItemClick}
             >
               Get in Touch
             </Button>
           </div>
-        </DrawerContent>
-      </Drawer>
-    </Ripple>
+        </div>
+      )}
+    </>
   )
 }

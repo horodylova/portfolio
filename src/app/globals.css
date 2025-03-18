@@ -5,7 +5,10 @@
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
 
-  --primary-color: #0070f3;
+  --primary-color: #6366f1;  
+  --button-color: #ec4899;  
+  --heading-color: #0f172a;  
+  
   --background-start: #ffffff;
   --background-end: #f5f5f5;
 }
@@ -36,6 +39,25 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading-color);
+}
+
+button, .button {
+  background-color: var(--button-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover, .button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
 }
 
 .container {

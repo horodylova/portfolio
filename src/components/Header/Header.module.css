@@ -29,10 +29,43 @@
 .logo {
   font-size: 1.4rem;
   font-weight: bold;
-  background: linear-gradient(135deg, #6b73ff 0%, #000dff 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   letter-spacing: 1px;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  transform: translateY(-2px);
+}
+
+.firstName {
+  background: linear-gradient(90deg, var(--primary-color), var(--button-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  position: relative;
+}
+
+.firstName::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary-color), var(--button-color));
+  transition: width 0.3s ease;
+}
+
+.logo:hover .firstName::after {
+  width: 100%;
+}
+
+.lastName {
+  color: var(--heading-color);
 }
 
 .desktopNav {
@@ -47,38 +80,70 @@
   font-weight: 500;
   transition: all 0.2s ease;
   border-radius: 4px;
+  color: var(--primary-color) !important;
 }
 
 .navButton:hover {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(99, 102, 241, 0.1);
   transform: translateY(-2px);
 }
 
 .contactButton {
   font-weight: 500;
   padding: 0.5rem 1.2rem;
-  background: linear-gradient(135deg, #6b73ff 0%, #000dff 100%);
-  color: white;
-  border: none;
+  background-color: var(--button-color) !important;
+  color: white !important;
+  border: none !important;
   transition: all 0.3s ease;
 }
 
 .contactButton:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.3);
+  opacity: 0.9;
 }
 
 .mobileMenu {
   display: none;
 }
 
-.burgerButton {
-  font-size: 1.5rem;
+/* Hamburger menu styles */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  background: transparent !important;
+  border: none !important;
+  cursor: pointer;
+  padding: 10px !important;
+  margin: 0 !important;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: var(--primary-color);
+  border-radius: 3px;
+  margin-bottom: 4px;
+}
+
+.hamburger span:last-child {
+  margin-bottom: 0;
 }
 
 .drawer {
   width: 280px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.drawerContactButton {
+  width: 100%;
+  margin-top: 1rem;
+  background-color: var(--button-color) !important;
+  color: white !important;
 }
 
 .drawerHeader {
@@ -92,13 +157,16 @@
 .drawerLogo {
   font-size: 1.2rem;
   font-weight: bold;
-  background: linear-gradient(135deg, #6b73ff 0%, #000dff 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--heading-color);
 }
 
 .closeButton {
-  font-size: 1.2rem;
+  font-size: 2rem;
+  background: transparent !important;
+  border: none !important;
+  cursor: pointer;
+  line-height: 1;
+  color: var(--primary-color) !important;
 }
 
 .drawerContent {
@@ -114,15 +182,20 @@
   padding: 0.8rem;
   border-radius: 4px;
   font-weight: 500;
+  color: var(--primary-color) !important;
+}
+
+.drawerItem:hover {
+  background-color: rgba(99, 102, 241, 0.1) !important;
 }
 
 .drawerContactButton {
   width: 100%;
   margin-top: 1rem;
   padding: 0.8rem;
-  background: linear-gradient(135deg, #6b73ff 0%, #000dff 100%);
-  color: white;
-  border: none;
+  background-color: var(--button-color) !important;
+  color: white !important;
+  border: none !important;
   font-weight: 500;
 }
 
@@ -144,5 +217,92 @@
   .scrolled {
     padding: 0.5rem 1rem;
   }
+}
+
+@media (min-width: 769px) {
+  .mobileMenu {
+    display: none !important;
+  }
+}
+
+/* Добавьте эти стили для мобильного меню */
+.mobileDrawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 280px;
+  height: 100vh;
+  background: white;
+  z-index: 2000;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Убедитесь, что эти стили присутствуют */
+@media (max-width: 768px) {
+  .desktopNav {
+    display: none !important;
+  }
+
+  .mobileMenu {
+    display: flex !important;
+    flex: 1;
+    justify-content: flex-end;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobileMenu {
+    display: none !important;
+  }
+}
+
+.logoButton {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logoButton:hover {
+  transform: translateY(-2px);
+}
+
+.firstName {
+  background: linear-gradient(90deg, var(--primary-color), var(--button-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  position: relative;
+}
+
+.firstName::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary-color), var(--button-color));
+  transition: width 0.3s ease;
+}
+
+.logo:hover .firstName::after {
+  width: 100%;
+}
+
+.lastName {
+  color: var(--heading-color);
 }
  
