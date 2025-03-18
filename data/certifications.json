@@ -1,0 +1,68 @@
+{
+  "certifications": [
+    {
+      "id": 1,
+      "title": "Microsoft Azure AI Essentials: Workloads and Machine Learning on Azure",
+      "issuer": "Microsoft",
+      "date": "February 2025",
+      "details": []
+    },
+    {
+      "id": 2,
+      "title": "Hugging Face AI Agents Fundamentals",
+      "issuer": "Hugging Face",
+      "date": "February 2025",
+      "details": [
+        "Created a tool that provides sunrise times using API integration",
+        "Developed timezone tools using Python's pytz library"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Machine Learning Tech Taster",
+      "issuer": "Code First Girls",
+      "date": "February 2025",
+      "details": [
+        "Practical experience with K-Nearest Neighbors, Linear Regression, and Neural Networks"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "HackFrost Winter Hackathon",
+      "issuer": "WeMakeDevs",
+      "date": "November-December 2024",
+      "details": [
+        "Built backend with Kestra Orchestrator, received incentive prize"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Artificial Intelligence",
+      "issuer": "Netpeak",
+      "date": "September 2024",
+      "details": [
+        "Fundamentals, capabilities, and working with text-based AI"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Software Development Associate Engineer",
+      "issuer": "Northcoders",
+      "date": "June-August 2024",
+      "details": []
+    },
+    {
+      "id": 7,
+      "title": "Bootcamp Finalist",
+      "issuer": "Kharkiv IT Cluster",
+      "date": "February-May 2024",
+      "details": []
+    },
+      {
+        "id": 8,
+          "degree": "Fullstack Developer",
+          "institution": "GoIT",
+          "period": "September 2022 - March 2024",
+          "details": []
+      }]
+}

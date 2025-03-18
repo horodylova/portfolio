@@ -1,0 +1,59 @@
+{
+  "experience": [
+    {
+      "id": 1,
+      "title": "Social Media Manager",
+      "company": "Swetugg",
+      "period": "October 2024 - Present",
+      "responsibilities": [
+        "Member of the creation team for the annual IT conference in Stockholm",
+        "Planning and creating content for social networks and visual design",
+        "Participating in technology conference planning and execution"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Frontend Developer",
+      "company": "Hvirtka",
+      "period": "October 2024 - February 2025",
+      "responsibilities": [
+        "Worked in a team creating a social network for finding friends based on shared interests",
+        "Collaborated with cross-functional teams to drive feature adoption"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Intern Web Developer",
+      "company": "2Toucans",
+      "period": "September 2024 - December 2024",
+      "responsibilities": [
+        "Collaborated on a project developed on the Drupal platform using PHP and Docker Compose",
+        "Handled both logical and front-end development tasks to improve and maintain the website",
+        "Used project management tools to manage tasks and track progress"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "FullStack Developer",
+      "company": "Northcoders Bootcamp",
+      "period": "June 2024 - August 2024",
+      "responsibilities": [
+        "Mastered core JavaScript concepts, backend development with Node.js and Express",
+        "Built dynamic user interfaces with React, emphasizing component-based architecture",
+        "Implemented Test-Driven Development (TDD) using Jest and SuperTest",
+        "Collaborated through pair programming sessions, developing strong communication skills"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Chief Content Officer",
+      "company": "Travellizy",
+      "period": "November 2018 - May 2022",
+      "responsibilities": [
+        "Managed and created content for the company website and social media pages",
+        "Supervised the work of translators, designers, SMM, and SEO managers",
+        "Participated in the implementation and development of content marketing strategy"
+      ]
+    }
+  ]
+}

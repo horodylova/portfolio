@@ -1,0 +1,67 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Text Buddy",
+      "description": "Text transformation from formal to conversational style. OPEN API operation.",
+      "image": "/images/projects/text-buddy-placeholder.jpg",
+      "link": "https://text-buddy-project.com"
+    },
+    {
+      "id": 2,
+      "title": "Special Letter",
+      "description": "Fullstack project for people who want to write letters to themselves in the future. The server is on Node, the database is stored on Postgres. The client is written in React.",
+      "image": "/images/projects/special-letter-placeholder.jpg",
+      "link": "https://special-letter.com"
+    },
+    {
+      "id": 3,
+      "title": "Cupid's Plan",
+      "description": "Multi-functional AI system designed to transform romantic date planning into an effortless, personalized experience.",
+      "image": "/images/projects/cupids-plan-placeholder.jpg",
+      "link": "https://cupidsplan.com"
+    },
+    {
+      "id": 4,
+      "title": "Northchess",
+      "description": "Mobile chess game using Dart and Flutter, featuring smooth animations, move highlights, and special move handling.",
+      "image": "/images/projects/northchess-placeholder.jpg",
+      "link": "https://northchess-app.com"
+    },
+    {
+      "id": 5,
+      "title": "Water Tracker",
+      "description": "A website to monitor daily water consumption using Node.js and Express for the backend and React for the frontend.",
+      "image": "/images/projects/water-tracker-placeholder.jpg",
+      "link": "https://water-tracker-app.com"
+    },
+    {
+      "id": 6,
+      "title": "WebStudio",
+      "description": "Responsive website layout as a solo developer using HTML, SASS, and JavaScript.",
+      "image": "/images/projects/webstudio-placeholder.jpg",
+      "link": "https://webstudio-project.com"
+    },
+    {
+      "id": 7,
+      "title": "IT-certification",
+      "description": "Service providing access to educational curricula.",
+      "image": "/images/projects/it-certification-placeholder.jpg",
+      "link": "https://it-certification.com"
+    },
+    {
+      "id": 8,
+      "title": "Bookshelf",
+      "description": "Responsive website using HTML, SASS, JS, and Parcel.",
+      "image": "/images/projects/bookshelf-placeholder.jpg",
+      "link": "https://bookshelf-project.com"
+    },
+    {
+      "id": 9,
+      "title": "Ice Cream",
+      "description": "Basic e-commerce platform, implementing client communication, managing customer feedback, and creating a user-friendly contact form.",
+      "image": "/images/projects/ice-cream-placeholder.jpg",
+      "link": "https://ice-cream-shop.com"
+    }
+  ]
+}
