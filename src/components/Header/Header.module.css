@@ -17,10 +17,6 @@
   background: rgba(255, 255, 255, 0.95);
 }
 
-.headerLeft {
-  flex: 0 0 auto;
-}
-
 .logoContainer {
   display: flex;
   align-items: center;
@@ -76,28 +72,28 @@
   gap: 1.5rem;
 }
 
-.navButton {
+.navButton, .drawerItem {
   font-weight: 500;
   transition: all 0.2s ease;
   border-radius: 4px;
   color: var(--primary-color) !important;
 }
 
-.navButton:hover {
+.navButton:hover, .drawerItem:hover {
   background-color: rgba(99, 102, 241, 0.1);
   transform: translateY(-2px);
 }
 
-.contactButton {
+.contactButton, .drawerContactButton {
   font-weight: 500;
-  padding: 0.5rem 1.2rem;
   background-color: var(--button-color) !important;
   color: white !important;
   border: none !important;
   transition: all 0.3s ease;
+  padding: 0.5rem 1.2rem;
 }
 
-.contactButton:hover {
+.contactButton:hover, .drawerContactButton:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(236, 72, 153, 0.3);
   opacity: 0.9;
@@ -107,7 +103,6 @@
   display: none;
 }
 
-/* Hamburger menu styles */
 .hamburger {
   display: flex;
   flex-direction: column;
@@ -137,13 +132,6 @@
 .drawer {
   width: 280px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-}
-
-.drawerContactButton {
-  width: 100%;
-  margin-top: 1rem;
-  background-color: var(--button-color) !important;
-  color: white !important;
 }
 
 .drawerHeader {
@@ -176,36 +164,13 @@
   gap: 1rem;
 }
 
-.drawerItem {
-  width: 100%;
-  justify-content: flex-start;
-  padding: 0.8rem;
-  border-radius: 4px;
-  font-weight: 500;
-  color: var(--primary-color) !important;
-}
-
-.drawerItem:hover {
-  background-color: rgba(99, 102, 241, 0.1) !important;
-}
-
-.drawerContactButton {
-  width: 100%;
-  margin-top: 1rem;
-  padding: 0.8rem;
-  background-color: var(--button-color) !important;
-  color: white !important;
-  border: none !important;
-  font-weight: 500;
-}
-
 @media (max-width: 768px) {
   .desktopNav {
-    display: none;
+    display: none !important;
   }
 
   .mobileMenu {
-    display: flex;
+    display: flex !important;
     flex: 1;
     justify-content: flex-end;
   }
@@ -213,7 +178,7 @@
   .header {
     padding: 0.8rem 1rem;
   }
-  
+
   .scrolled {
     padding: 0.5rem 1rem;
   }
@@ -225,7 +190,6 @@
   }
 }
 
-/* Добавьте эти стили для мобильного меню */
 .mobileDrawer {
   position: fixed;
   top: 0;
@@ -247,25 +211,6 @@
   }
 }
 
-/* Убедитесь, что эти стили присутствуют */
-@media (max-width: 768px) {
-  .desktopNav {
-    display: none !important;
-  }
-
-  .mobileMenu {
-    display: flex !important;
-    flex: 1;
-    justify-content: flex-end;
-  }
-}
-
-@media (min-width: 769px) {
-  .mobileMenu {
-    display: none !important;
-  }
-}
-
 .logoButton {
   background: transparent !important;
   border: none !important;
@@ -278,31 +223,3 @@
 .logoButton:hover {
   transform: translateY(-2px);
 }
-
-.firstName {
-  background: linear-gradient(90deg, var(--primary-color), var(--button-color));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  position: relative;
-}
-
-.firstName::after {
-  content: '';
-  position: absolute;
-  bottom: -3px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, var(--primary-color), var(--button-color));
-  transition: width 0.3s ease;
-}
-
-.logo:hover .firstName::after {
-  width: 100%;
-}
-
-.lastName {
-  color: var(--heading-color);
-}
- 

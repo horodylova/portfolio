@@ -73,7 +73,6 @@ export default function Header() {
         </AppBarSection>
       </AppBar>
 
-      {/* Мобильное меню */}
       {isDrawerOpen && (
         <div className={styles.mobileDrawer}>
           <div className={styles.drawerHeader}>
