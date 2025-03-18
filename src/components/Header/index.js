@@ -1,9 +1,10 @@
 "use client"
 
-import { AppBar, AppBarSection, Drawer, DrawerContent } from "@progress/kendo-react-layout"
+import { AppBar, AppBarSection } from "@progress/kendo-react-layout"
 import { Button } from "@progress/kendo-react-buttons"
-import { Ripple } from "@progress/kendo-react-ripple"
-import { useState, useEffect } from "react"
+import { SvgIcon } from "@progress/kendo-react-common"
+import { menuIcon, homeIcon, userIcon, folderIcon, envelopeIcon } from "@progress/kendo-svg-icons"
+ import { useState, useEffect } from "react"
 import styles from './Header.module.css'
 
 export default function Header() {
@@ -19,10 +20,10 @@ export default function Header() {
   }, [])
 
   const menuItems = [
-    { text: "About" },
-    { text: "Projects" },
-    { text: "Skills" },
-    { text: "Contact" }
+    { text: "About", icon: userIcon },
+    { text: "Projects", icon: folderIcon },
+    { text: "Skills", icon: homeIcon },
+    { text: "Contact", icon: envelopeIcon }
   ]
   
   const handleMenuItemClick = () => {
@@ -48,6 +49,7 @@ export default function Header() {
               look="flat" 
               className={styles.navButton}
             >
+                <SvgIcon icon={item.icon} className={styles.navIcon} />
               {item.text}
             </Button>
           ))}

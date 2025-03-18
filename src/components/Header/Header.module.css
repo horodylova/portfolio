@@ -72,6 +72,12 @@
   gap: 1.5rem;
 }
 
+.navIcon {
+  margin-right: 8px;
+  font-size: 18px;
+  color: var(--primary-color);
+}
+
 .navButton, .drawerItem {
   font-weight: 500;
   transition: all 0.2s ease;
@@ -162,6 +168,35 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+@media (min-width: 768px) and (max-width: 900px) {
+  .desktopNav {
+    gap: 0.8rem;
+  }
+  
+  .navButton {
+    padding: 0.3rem 0.5rem !important;
+    font-size: 0.9rem;
+  }
+  
+  .contactButton {
+    padding: 0.4rem 0.8rem !important;
+    font-size: 0.9rem;
+  }
+  
+  .navIcon {
+    margin-right: 4px;
+    font-size: 16px;
+  }
+  
+  .logo {
+    font-size: 1.2rem;
+  }
+  
+  .firstName, .lastName {
+    font-size: 1.2rem;
+  }
 }
 
 @media (max-width: 768px) {
