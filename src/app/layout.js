@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <Header setActiveSection={setActiveSection} />
         <div className="main-container">
-          {/* <Sidebar setActiveSection={setActiveSection} /> */}
+          <Sidebar setActiveSection={setActiveSection} />
           <main className="content">
             {children}
           </main>

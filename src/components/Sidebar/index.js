@@ -1,84 +1,76 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Button } from "@progress/kendo-react-buttons"
 import { SvgIcon } from "@progress/kendo-react-common"
-import { homeIcon, userIcon, folderIcon, envelopeIcon } from "@progress/kendo-svg-icons"
-import { Ripple } from "@progress/kendo-react-ripple"
-import { Tooltip } from "@progress/kendo-react-tooltip"
+import { Button } from "@progress/kendo-react-buttons"
+import { homeIcon, userIcon, folderIcon, envelopeIcon, arrowLeftIcon, arrowRightIcon } from "@progress/kendo-svg-icons"
 import styles from './Sidebar.module.css'
 
 export default function Sidebar() {
+  const [collapsed, setCollapsed] = useState(false)
+  const [activeItem, setActiveItem] = useState('About')
+  
   const menuItems = [
     { text: "About", icon: userIcon },
     { text: "Projects", icon: folderIcon },
     { text: "Skills", icon: homeIcon },
     { text: "Contact", icon: envelopeIcon }
   ]
-
-  const socialLinks = [
-    {  url: "https://github.com" },
-    {  url: "https://linkedin.com" }
-  ]
-
-  const [activeItem, setActiveItem] = useState(0)
-  const [isDarkMode, setIsDarkMode] = useState(false)
-
-  useEffect(() => {
-    const savedTheme = localStorage.getItem('theme')
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-    
-    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-      setIsDarkMode(true)
-    }
-  }, [])
-
+  
+  const toggleSidebar = () => {
+    setCollapsed(!collapsed)
+  }
+  
+  const handleNavItemClick = (item) => {
+    setActiveItem(item)
+  }
+  
   return (
-    <Ripple>
-      <div className={styles.sidebar}>
-        <div className={styles.sidebarLogo}>
-          <span className={styles.logoText}>SH</span>
+    <>
+      <div className={`${styles.sidebar} ${collapsed ? styles.sidebarHidden : ''}`}>
+        <div className={styles.sidebarHeader}>
+          <div className={styles.sidebarLogo}>
+            <span>Svitlana Horodylova</span>
+          </div>
         </div>
         
-        <nav className={styles.sidebarNav}>
-          {menuItems.map((item, index) => (
-            <Tooltip key={index} title={item.text} position="right">
-              <Button 
-                look={activeItem === index ? "primary" : "flat"}
-                className={`${styles.sidebarItem} ${activeItem === index ? styles.active : ''}`}
-                onClick={() => setActiveItem(index)}
-              >
-                <SvgIcon icon={item.icon} className={styles.itemIcon} />
-                <span className={styles.itemText}>{item.text}</span>
-              </Button>
-            </Tooltip>
-          ))}
-        </nav>
+        <div className={styles.sidebarContent}>
+          <ul className={styles.sidebarNav}>
+            {menuItems.map((item, index) => (
+              <li key={index} className={styles.sidebarNavItem}>
+                <a 
+                  href={`#${item.text.toLowerCase()}`}
+                  className={`${styles.sidebarNavLink} ${activeItem === item.text ? styles.active : ''}`}
+                  onClick={() => handleNavItemClick(item.text)}
+                >
+                  <SvgIcon icon={item.icon} className={styles.sidebarNavIcon} />
+                  <span className={styles.sidebarNavText}>{item.text}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
         
         <div className={styles.sidebarFooter}>
-          <div className={styles.socialLinks}>
-            {socialLinks.map((link, index) => (
-              <Tooltip key={index} title="Visit Profile" position="right">
-                <Button 
-                  look="flat"
-                  className={styles.socialButton}
-                  onClick={() => window.open(link.url, '_blank')}
-                >
-                  <SvgIcon icon={link.icon} className={styles.socialIcon} />
-                </Button>
-              </Tooltip>
-            ))}
-          </div>
           <Button 
-            look="outline"
-            rounded="full"
-            className={styles.contactButton}
+            className={styles.sidebarContactButton}
+            onClick={() => handleNavItemClick('Contact')}
           >
-            <SvgIcon icon={envelopeIcon} className={styles.contactIcon} />
-            <span>Get in Touch</span>
+            <SvgIcon icon={envelopeIcon} className={styles.sidebarContactIcon} />
+            Get in Touch
           </Button>
         </div>
       </div>
-    </Ripple>
+      
+      <button 
+        className={`${styles.sidebarToggle} ${collapsed ? styles.collapsed : ''}`}
+        onClick={toggleSidebar}
+      >
+        <SvgIcon 
+          icon={collapsed ? arrowRightIcon : arrowLeftIcon} 
+          className={styles.sidebarToggleIcon} 
+        />
+      </button>
+    </>
   )
 }
