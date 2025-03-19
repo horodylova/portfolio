@@ -1,74 +1,96 @@
 .sidebar {
-  width: 250px;
-  height: 100vh;
-  position: fixed;
-  left: 0;
-  top: 0;
-  background: white;
+  width: 25%;
+  height: calc(100vh - 70px);
+  background-color: var(--bg-color);
   border-right: 1px solid rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
-  padding: 2rem 1rem;
-  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+  padding: 2.5rem 1.5rem;
+  position: fixed;
+  top: 70px;
+  left: 0;
+  transition: all 0.3s ease;
 }
 
 .sidebarLogo {
   display: flex;
   justify-content: center;
-  margin-bottom: 3rem;
+  align-items: center;
+  margin-bottom: 4rem;
 }
 
-.sidebarLogo span {
+.logoText {
   font-size: 2rem;
   font-weight: bold;
-  background: linear-gradient(135deg, #6b73ff 0%, #000dff 100%);
+  color: var(--primary-color);
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  border: 2px solid rgba(0, 0, 0, 0.05);
 }
 
 .sidebarNav {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  flex: 1;
+  gap: 1.5rem;
 }
 
 .sidebarItem {
-  width: 100%;
-  justify-content: flex-start;
-  padding: 0.8rem;
-  border-radius: 4px;
-  font-weight: 500;
-  transition: all 0.2s ease;
+  display: flex !important;
+  align-items: center !important;
+  padding: 0.8rem 1rem !important;
+  border-radius: 8px !important;
+  transition: all 0.3s ease !important;
+  background-color: transparent !important;
+  border: none !important;
+  color: var(--text-color) !important;
 }
 
 .sidebarItem:hover {
-  background-color: rgba(0, 0, 0, 0.05);
-  transform: translateX(5px);
+  background-color: rgba(var(--primary-rgb), 0.1) !important;
+  transform: translateY(-2px);
 }
 
-.sidebarFooter {
-  margin-top: 2rem;
+.sidebarItem.active {
+  background-color: var(--primary-color) !important;
+  color: white !important;
+  box-shadow: 0 4px 12px rgba(var(--primary-rgb), 0.3);
 }
 
-.contactButton {
-  width: 100%;
-  padding: 0.8rem;
-  background: linear-gradient(135deg, #6b73ff 0%, #000dff 100%);
-  color: white;
-  border: none;
-  font-weight: 500;
+.itemIcon {
+  margin-right: 12px;
+  font-size: 1rem !important;
+  width: 18px !important;
+  height: 18px !important;
 }
 
-@media (max-width: 1024px) {
+.sidebarItem.active .itemIcon {
+  color: white !important;
+  font-size: 1rem !important;
+  width: 18px !important;
+  height: 18px !important;
+}
+
+/* Медиа-запрос для скрытия сайдбара на мобильных устройствах */
+@media (max-width: 768px) {
   .sidebar {
     display: none;
   }
+}
+
+/* Стили для темной темы */
+[data-theme="dark"] .sidebar {
+  border-right-color: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] .sidebarItem:hover {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+[data-theme="dark"] .socialButton {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+[data-theme="dark"] .socialButton:hover {
+  background-color: var(--primary-color) !important;
 }

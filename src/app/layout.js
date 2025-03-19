@@ -1,24 +1,27 @@
-import '@progress/kendo-theme-default/dist/all.css'
+"use client"
+
+import { useState } from 'react';
+import { Inter } from 'next/font/google'
 import './globals.css'
-
 import Header from '@/components/Header'
+import Sidebar from '@/components/Sidebar'
 
-export const metadata = {
-  title: "Svitlana horodylova - Portfolio",
-  description: "Web developer's portfolio",
-};
+const inter = Inter({ subsets: ['latin'] })
 
 export default function RootLayout({ children }) {
+  const [activeSection, setActiveSection] = useState("hero");
+
   return (
-    <html lang="ru">
-      <body>
-        <Header />
-        <main>
-          {children}
-        </main>
-        <footer>
-        </footer>
+    <html lang="en">
+      <body className={inter.className}>
+        <Header setActiveSection={setActiveSection} />
+        <div className="main-container">
+          {/* <Sidebar setActiveSection={setActiveSection} /> */}
+          <main className="content">
+            {children}
+          </main>
+        </div>
       </body>
     </html>
-  );
+  )
 }

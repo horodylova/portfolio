@@ -1,14 +1,18 @@
 .header {
-  background: var(--header-bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--header-bg);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  padding: 0.8rem 2rem;
-  transition: all 0.3s ease;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
+  transition: all 0.3s ease;
+  height: 70px;
+
 }
 
 .scrolled {
@@ -117,28 +121,6 @@
 
 .mobileMenu {
   display: none;
-}
-
-.hamburger {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  background: transparent !important;
-  border: none !important;
-  cursor: pointer;
-  padding: 0 !important;
-  margin: 0 !important;
-}
-
-.hamburger span {
-  display: block;
-  width: 30px;
-  height: 3px;
-  background: var(--primary-color);
-  border-radius: 3px;
-  margin: 2px 0;
 }
 
 .themeSwitch {
@@ -381,6 +363,110 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
+.drawerItem {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.drawerItem::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: all 0.5s ease;
+  z-index: -1;
+}
+
+.drawerItem:hover::before {
+  left: 100%;
+}
+
+.drawerItem:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(99, 102, 241, 0.4);
+}
+
+.drawerItemIcon {
+  margin-right: 10px;
+  color: white;
+  width: 16px;
+  height: 16px;
+}
+
+.drawerContactButton {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-weight: 500;
+  background-color: var(--button-color) !important;
+  color: white !important;
+  border: none !important;
+  transition: all 0.3s ease;
+  padding: 0.8rem;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.drawerContactButton::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, 
+    rgba(255, 255, 255, 0) 0%, 
+    rgba(255, 255, 255, 0.1) 50%, 
+    rgba(255, 255, 255, 0) 100%);
+  transform: translateX(-100%) skewX(-15deg);
+  transition: transform 0.6s ease;
+  z-index: -1;
+}
+
+.drawerContactButton:hover::after {
+  transform: translateX(100%) skewX(-15deg);
+}
+
+.drawerContactButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(236, 72, 153, 0.4);
+}
+
+.drawerContactIcon {
+  margin-right: 8px;
+  color: white;
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
+}
+
+.drawerContactButton:hover .drawerContactIcon {
+  transform: rotate(15deg);
+}
+
+.drawerContactText {
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-align: left;
+}
 
  
 .drawerLogo {
@@ -403,54 +489,6 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
-}
-
-.drawerItem {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.8rem;
-  border-radius: 4px;
-  font-weight: 500;
-  color: var(--primary-color) !important;
-  transition: all 0.2s ease;
-}
-
-.drawerItem:hover {
-  background-color: rgba(99, 102, 241, 0.1);
-  transform: translateY(-2px);
-}
-
-.drawerItemIcon {
-  color: var(--primary-color);
-  margin-right: 12px;
-  font-size: 18px;
-}
-
-
-.drawerContactIcon{
-  margin-right: 10px;
-}
-
-.drawerContactButton {
- width: 100%;
- display: flex;
- justify-content: center;
- align-items: center;
- font-weight: 500;
- background-color: var(--button-color) !important;
- color: white !important;
- border: none !important;
- transition: all 0.3s ease;
- padding: 0.8rem;
- border-radius: 4px;
-}
-
-.drawerContactButton:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.3);
-  opacity: 0.9;
 }
 
 .mobileDrawer {
@@ -510,4 +548,84 @@
   .mobileMenu {
     display: none !important;
   }
+}
+
+.mobileMenuControls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.hamburger {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  width: 24px !important;
+  height: 20px !important;
+  background: transparent !important;
+  border: none !important;
+  cursor: pointer !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  position: relative !important;
+}
+
+.hamburger span {
+  display: block !important;
+  width: 100% !important;
+  height: 2px !important;
+  background-color: var(--primary-color) !important;
+  border-radius: 2px !important;
+  margin-bottom: 5px !important;
+}
+
+.hamburger span:last-child {
+  margin-bottom: 0 !important;
+}
+
+.contactButton {
+  background-color: var(--button-color) !important;
+  color: white !important;
+  border: none !important;
+  padding: 0.5rem 1.2rem !important;
+  border-radius: 8px !important;
+  font-weight: 500 !important;
+  font-size: 0.9rem !important;
+  transition: all 0.3s ease !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.contactButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.3);
+  opacity: 0.9;
+}
+
+.mobileDrawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 80%;
+  max-width: 300px;
+  height: 100vh;
+  background-color: var(--drawer-bg);
+  z-index: 1100;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  overflow-y: auto;
+}
+
+
+.drawerContactIcon {
+  margin-right: 8px;
+  color: white;
+  width: 16px;
+  height: 16px;
+}
+
+[data-theme="dark"] .closeButton {
+  color: white;
 }

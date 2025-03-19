@@ -83,6 +83,25 @@ button:hover, .button:hover {
   transform: translateY(-2px);
 }
 
+svg {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.contactIcon, .drawerContactIcon {
+  margin-right: 6px !important;
+  width: 14px !important;
+  height: 14px !important;
+}
+
+.drawerItemIcon {
+  margin-right: 8px !important;
+  width: 16px !important;
+  height: 16px !important;
+}
+
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
