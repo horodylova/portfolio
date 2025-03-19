@@ -107,7 +107,6 @@ export default function Header() {
       {isDrawerOpen && (
         <div className={styles.mobileDrawer}>
           <div className={styles.drawerHeader}>
-            <span className={styles.drawerLogo}>Menu</span>
             <Button 
               className={styles.closeButton}
               onClick={() => setIsDrawerOpen(false)}
