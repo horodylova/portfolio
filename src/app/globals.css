@@ -113,3 +113,88 @@ svg {
     padding: 0 0.5rem;
   }
 }
+
+.main-container {
+  position: relative;
+  display: flex;
+}
+
+.content {
+  flex: 1;
+  position: relative;
+}
+
+/* Вертикальная линия прокрутки */
+.vertical-scroll-line {
+  position: fixed;
+  left: 270px; /* Чуть правее сайдбара */
+  top: 100px; /* Ниже хедера */
+  height: calc(100vh - 120px);
+  width: 3px;
+  background: linear-gradient(to bottom, transparent, var(--button-color), transparent);
+  z-index: 800;
+  transition: left 0.3s ease; /* Добавляем плавный переход */
+}
+
+/* Индикатор текущей секции */
+.scroll-indicator {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: var(--button-color);
+  border-radius: 50%;
+  left: -4.5px;
+  transition: top 0.5s ease;
+  box-shadow: 0 0 20px var(--button-color);
+}
+
+/* Позиции индикатора для разных секций */
+.scroll-indicator.hero {
+  top: 10%;
+}
+
+.scroll-indicator.summary {
+  top: 30%;
+}
+
+.scroll-indicator.projects {
+  top: 50%;
+}
+
+.scroll-indicator.skills {
+  top: 70%;
+}
+
+.scroll-indicator.contact {
+  top: 90%;
+}
+
+/* Когда сайдбар скрыт, линия прокрутки смещается влево */
+.sidebar-hidden .vertical-scroll-line {
+  left: 20px;
+}
+
+/* Стили для контента при скрытом сайдбаре */
+.content {
+  margin-left: 250px;
+  transition: margin-left 0.3s ease;
+  width: calc(100% - 250px);
+}
+
+.sidebar-hidden .content {
+  margin-left: 0;
+  width: 100%;
+}
+
+/* Добавьте позиции для других секций по мере их добавления */
+
+/* Стили для активной секции */
+.active-section {
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .vertical-scroll-line {
+    left: 20px;
+  }
+}

@@ -1,12 +1,20 @@
-.sidebar {
+/* Добавляем обертку для сайдбара и стрелочки */
+.sidebarWrapper {
   position: fixed;
   left: 0;
   top: 70px;
-  width: 250px;
   height: calc(100vh - 70px);
+  z-index: 900;
+}
+
+.sidebar {
+  position: relative; /* Изменено с fixed на relative */
+  left: 0;
+  top: 0; /* Изменено с 70px на 0 */
+  width: 250px;
+  height: 100%; /* Изменено с calc(100vh - 70px) на 100% */
   background: var(--sidebar-bg, rgba(255, 255, 255, 0.05));
   backdrop-filter: blur(10px);
-  z-index: 900;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   padding: 2rem 0;
   display: flex;
@@ -155,17 +163,17 @@
 
 .sidebarToggle {
   position: absolute;
-  top: 80px; 
+  top: 80px;
   left: 250px;
-  width: 30px; 
+  width: 30px;
   height: 40px;
-  background-color: var(--primary-color); 
+  background-color: var(--primary-color);
   border-radius: 0 5px 5px 0;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  z-index: 1500;  
+  z-index: 1500;
   transition: all 0.3s ease;
 }
 

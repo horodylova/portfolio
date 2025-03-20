@@ -1,0 +1,149 @@
+.summarySection {
+  padding: 6rem 2rem;
+  position: relative;
+  margin-left: 250px;
+  width: calc(100% - 250px);
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
+.summaryContainer {
+  display: flex;
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Удалены стили для verticalScrollLine и scrollIndicator */
+
+.summaryContent {
+  padding: 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.summaryTitle {
+  font-family: "Comfortaa", sans-serif;
+  color: var(--heading-color);
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.summaryTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 70%;
+  height: 3px;
+  background: linear-gradient(to right, var(--button-color), transparent);
+}
+
+.summaryText {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--text-color);
+  position: relative;
+}
+
+.summaryText::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 40px;
+  height: 40px;
+  border-top: 2px solid var(--primary-color);
+  border-left: 2px solid var(--primary-color);
+  opacity: 0.5;
+}
+
+.summaryText::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 40px;
+  height: 40px;
+  border-bottom: 2px solid var(--primary-color);
+  border-right: 2px solid var(--primary-color);
+  opacity: 0.5;
+}
+
+.highlightText {
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.flickerText {
+  animation: textFlicker 5s linear infinite;
+}
+
+@keyframes textFlicker {
+  0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+    opacity: 1;
+    text-shadow: 0 0 4px var(--primary-color);
+  }
+  20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+    opacity: 0.8;
+    text-shadow: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .summarySection {
+    margin-left: 0;
+    width: 100%;
+    padding: 4rem 1rem;
+  }
+  
+  .summaryContainer {
+    padding: 1.5rem;
+    flex-direction: column;
+  }
+  
+  .verticalScrollLine {
+    width: 100%;
+    height: 3px;
+    margin-right: 0;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(to right, transparent, var(--button-color), transparent);
+  }
+  
+  .scrollIndicator {
+    top: -4.5px;
+    left: 0;
+    animation: scrollAnimationMobile 4s ease-in-out infinite;
+  }
+  
+  @keyframes scrollAnimationMobile {
+    0% {
+      left: 0;
+    }
+    50% {
+      left: calc(100% - 12px);
+    }
+    100% {
+      left: 0;
+    }
+  }
+  
+  .summaryTitle {
+    font-size: 2rem;
+  }
+  
+  .summaryText {
+    font-size: 1rem;
+  }
+}
