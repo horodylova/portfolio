@@ -28,12 +28,7 @@ export default function Sidebar() {
   return (
     <>
       <div className={`${styles.sidebar} ${collapsed ? styles.sidebarHidden : ''}`}>
-        <div className={styles.sidebarHeader}>
-          <div className={styles.sidebarLogo}>
-            <span>Svitlana Horodylova</span>
-          </div>
-        </div>
-        
+        {/* Удаляем блок с именем */}
         <div className={styles.sidebarContent}>
           <ul className={styles.sidebarNav}>
             {menuItems.map((item, index) => (

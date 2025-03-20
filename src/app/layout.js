@@ -5,6 +5,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/Header'
 import Sidebar from '@/components/Sidebar'
+import Hero from '@/components/Hero'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
         <div className="main-container">
           <Sidebar setActiveSection={setActiveSection} />
           <main className="content">
+            <Hero />
             {children}
           </main>
         </div>

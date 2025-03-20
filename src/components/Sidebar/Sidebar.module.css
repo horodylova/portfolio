@@ -1,12 +1,12 @@
 .sidebar {
   position: fixed;
   left: 0;
-  top: 0;
+  top: 70px;
   width: 250px;
-  height: 100vh;
+  height: calc(100vh - 70px);
   background: var(--sidebar-bg, rgba(255, 255, 255, 0.05));
   backdrop-filter: blur(10px);
-  z-index: 1000;
+  z-index: 900;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   padding: 2rem 0;
   display: flex;
@@ -18,24 +18,12 @@
   transform: translateX(-100%);
 }
 
-.sidebarHeader {
-  padding: 0 1.5rem 1.5rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  margin-bottom: 1.5rem;
-}
-
-.sidebarLogo {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: var(--heading-color);
-  display: flex;
-  align-items: center;
-}
-
+/* Удаляем стили для заголовка с именем */
 .sidebarContent {
   flex: 1;
   overflow-y: auto;
   padding: 0 1.5rem;
+  margin-top: 1rem; /* Добавляем отступ сверху */
 }
 
 .sidebarNav {
