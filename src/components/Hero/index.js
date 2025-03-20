@@ -1,8 +1,14 @@
 "use client"
+import { useEffect } from 'react'
 
 import styles from './Hero.module.css'
 
 export default function Hero() {
+    useEffect(() => {
+        const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+        document.documentElement.setAttribute('data-theme', currentTheme);
+      }, []);
+    
   return (
     <div className={styles.heroContainer}>
       <div className={styles.heroRow}>

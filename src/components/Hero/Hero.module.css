@@ -266,6 +266,7 @@
   opacity: 0.7;
 }
 
+/* Стили для тумана в светлой теме */
 [data-theme='light'] .heroFog0, 
 [data-theme='light'] .heroFog1, 
 [data-theme='light'] .heroFog2, 
@@ -276,6 +277,11 @@
 [data-theme='light'] .heroFog7, 
 [data-theme='light'] .heroFog8, 
 [data-theme='light'] .heroFog9 {
+  box-shadow: inset 0 0 50px rgba(99, 102, 241, .8), 0 0 50px rgba(236, 72, 153, .6);
+  opacity: 0.9;
+}
+
+.heroFog0, .heroFog1, .heroFog2, .heroFog3, .heroFog4, .heroFog5, .heroFog6, .heroFog7, .heroFog8, .heroFog9 {
   box-shadow: inset 0 0 50px rgba(99, 102, 241, .8), 0 0 50px rgba(236, 72, 153, .6);
   opacity: 0.9;
 }
