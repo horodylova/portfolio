@@ -244,10 +244,185 @@
     transform: none;
   }
   
-  /* Удаляем это правило, которое делает карточку синей при активации */
-  /* .bookSpine:active {
-    background-color: var(--primary-color);
-  } */
+  .spineContent {
+    width: 60%;
+    pointer-events: none;
+  }
+  
+  .spinePeriod {
+    width: 40%;
+    max-width: 40%;
+    font-size: 0.7rem;
+    white-space: normal;
+    min-height: 30px;
+    pointer-events: none;
+  }
+  
+  .spineTitle {
+    font-size: 1rem;
+    pointer-events: none;
+  }
+  
+  .spineCompany {
+    font-size: 0.8rem;
+    pointer-events: none;
+  }
+  
+  .bookSpineActive {
+    min-height: auto;
+    padding: 15px;
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 30;
+    touch-action: manipulation;
+    pointer-events: auto;
+    transform: none !important;
+  }
+  
+  .bookContent {
+    width: 100%;
+    padding: 5px;
+  }
+  
+  .bookHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    width: 100%;
+  }
+  
+  .bookHeader h3 {
+    font-size: 1.3rem;
+    width: 100%;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  .bookHeader span {
+    align-self: flex-start;
+    margin-top: 5px;
+    max-width: 100%;
+    overflow: visible;
+    white-space: normal;
+    font-size: 0.8rem;
+    padding: 3px 8px;
+    line-height: 1.3;
+    display: inline-block;
+    word-break: break-word;
+  }
+  
+  .companyName {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  
+  .responsibilities {
+    gap: 8px;
+    width: 100%;
+  }
+  
+  .responsibilityItem {
+    padding: 8px 10px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .responsibilityItem::before {
+    content: '•';
+    margin-right: 8px;
+    flex-shrink: 0;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .experienceSection {
+    margin-left: 0;
+    width: 100%;
+    padding: 5rem 2rem;
+  }
+  
+  .bookSpine {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .bookHeader {
+    flex-wrap: wrap;
+  }
+}
+
+
+/* Стили для интеграции с KendoReact */
+:global(.k-panelbar) {
+  border: none;
+  background: transparent;
+}
+
+:global(.k-panelbar .k-panelbar-item) {
+  border: none;
+}
+
+:global(.k-panelbar .k-panelbar-header) {
+  background: transparent;
+}
+
+:global(.k-chip) {
+  background: rgba(255, 255, 255, 0.2);
+  color: var(--heading-color);
+}
+
+:global(.k-badge-info) {
+  background-color: var(--primary-color);
+}
+
+/* Переопределяем стили для мобильной версии */
+@media (max-width: 768px) {
+  .experienceSection {
+    margin-left: 0;
+    width: 100%;
+    padding: 4rem 1rem;
+  }
+  
+  .experienceTitle {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .experienceTitle::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .bookshelf {
+    gap: 15px;
+    padding: 10px 0;
+    isolation: isolate;
+  }
+  
+  .bookSpine {
+    width: 100%;
+    max-width: 100%;
+    height: 70px;
+    padding: 0 15px;
+    border-radius: 5px;
+    transform-origin: center;
+    z-index: 5;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+  }
+  
+  .bookSpine:hover {
+    transform: none;
+  }
   
   .spineContent {
     width: 60%;
@@ -346,7 +521,6 @@
   }
 }
 
-/* Добавляем стили для планшетов */
 @media (min-width: 769px) and (max-width: 1024px) {
   .experienceSection {
     margin-left: 0;
