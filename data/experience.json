@@ -13,16 +13,6 @@
     },
     {
       "id": 2,
-      "title": "Frontend Developer",
-      "company": "Hvirtka",
-      "period": "October 2024 - February 2025",
-      "responsibilities": [
-        "Worked in a team creating a social network for finding friends based on shared interests",
-        "Collaborated with cross-functional teams to drive feature adoption"
-      ]
-    },
-    {
-      "id": 3,
       "title": "Intern Web Developer",
       "company": "2Toucans",
       "period": "September 2024 - December 2024",
@@ -33,7 +23,7 @@
       ]
     },
     {
-      "id": 4,
+      "id": 3,
       "title": "FullStack Developer",
       "company": "Northcoders Bootcamp",
       "period": "June 2024 - August 2024",
@@ -45,6 +35,17 @@
       ]
     },
     {
+      "id": 4,
+      "title": "Hospitality",
+      "company": "Wickham Bistro",
+      "period": "October 2022 - September 2024",
+      "responsibilities": [
+        "Collaborated with colleagues to achieve common goals",
+        "Managed multiple tasks simultaneously without compromising quality",
+        "Handled disputes and found amicable solutions"
+      ]
+    },
+    {
       "id": 5,
       "title": "Chief Content Officer",
       "company": "Travellizy",
@@ -53,6 +54,32 @@
         "Managed and created content for the company website and social media pages",
         "Supervised the work of translators, designers, SMM, and SEO managers",
         "Participated in the implementation and development of content marketing strategy"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Publishing Editor",
+      "company": "Website Odesa city 048.ua",
+      "period": "August 2011 - October 2018",
+      "responsibilities": [
+        "Attended press conferences, briefings and seminars",
+        "Managed SMM promotion of the site in social networks",
+        "Conducted interviews and coordinated the work of the editorial office",
+        "Wrote information and analytical materials (articles, news)",
+        "Prepared photo and video reports",
+        "Monitored blogs and social networks",
+        "Created promotional articles and image materials for 048.ua"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Journalist, Editor",
+      "company": "Odessa regional radio",
+      "period": "June 2004 - June 2011",
+      "responsibilities": [
+        "Wrote news and created plots for radio air",
+        "Edited sound and created music, entertainment and analytical programs",
+        "Conducted interviews"
       ]
     }
   ]

@@ -42,8 +42,8 @@ export default function Header() {
   }
 
   const menuItems = [
-    { text: "About", icon: userIcon },
-    { text: "Projects", icon: folderIcon },
+    { text: "Summary", icon: userIcon },
+    { text: "Experience", icon: folderIcon },
     { text: "Skills", icon: homeIcon },
     { text: "Contact", icon: envelopeIcon }
   ]

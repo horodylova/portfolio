@@ -172,6 +172,7 @@ svg {
   background: linear-gradient(to bottom, transparent, var(--button-color), transparent);
   z-index: 800;
   transition: left 0.3s ease;
+  pointer-events: none; 
 }
 
 .scroll-indicator {
@@ -184,6 +185,7 @@ svg {
   transition: top 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
   box-shadow: 0 0 20px var(--button-color);
   z-index: 801; 
+  pointer-events: none;
 }
 
 .scroll-indicator.hero {
@@ -227,6 +229,25 @@ svg {
 
 @media (max-width: 768px) {
   .vertical-scroll-line {
-    left: 20px;
+    left: 10px; /* Уменьшаем отступ слева */
+  }
+  
+  .content {
+    margin-left: 0; /* Убираем отступ для контента */
+    width: 100%; /* Контент занимает всю ширину */
+    padding-left: 20px; /* Небольшой отступ слева для контента */
+  }
+}
+
+/* Добавляем стили для планшетов */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .vertical-scroll-line {
+    left: 20px; /* Уменьшаем отступ слева для планшетов */
+  }
+  
+  .content {
+    margin-left: 0; /* Убираем отступ для контента */
+    width: 100%; /* Контент занимает всю ширину */
+    padding-left: 30px; /* Небольшой отступ слева для контента */
   }
 }

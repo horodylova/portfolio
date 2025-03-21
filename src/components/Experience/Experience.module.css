@@ -1,0 +1,365 @@
+.experienceSection {
+  padding: 6rem 2rem;
+  position: relative;
+  margin-left: 250px;
+  width: calc(100% - 250px);
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
+.experienceContainer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.experienceTitle {
+  font-family: "Comfortaa", sans-serif;
+  color: var(--heading-color);
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.experienceTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 70%;
+  height: 3px;
+  background: linear-gradient(to right, var(--button-color), transparent);
+}
+
+.bookshelf {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  padding: 20px 0;
+  width: 100%;
+  perspective: 1000px;
+}
+
+.bookSpine {
+  height: 80px;
+  background: linear-gradient(90deg, var(--primary-color), var(--button-color));
+  border-radius: 5px 0 0 5px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.1);
+  transform-origin: left center;
+  width: 525px; 
+  z-index: 1;
+}
+
+.spinePeriod {
+  font-size: 0.75rem;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 3px 8px;
+  border-radius: 12px;
+  white-space: nowrap;
+  overflow: visible; 
+  max-width: 45%; 
+  text-align: center;
+  line-height: 1.2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.spineContent {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  pointer-events: none;
+}
+
+.bookSpine:hover {
+  transform: translateX(10px);
+}
+
+.bookSpineActive {
+  width: 100%;
+  height: auto;
+  min-height: 250px;
+  border-radius: 5px;
+  background: var(--card-bg);
+  color: var(--text-color);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  transform: translateX(0);
+  z-index: 10;
+}
+
+.bookSpineActive .spineContent {
+  display: none;
+}
+
+.spineTitle {
+  font-weight: bold;
+  font-size: 1.1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  pointer-events: none;
+}
+
+.spineCompany {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.bookContent {
+  width: 100%;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.bookHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  border-bottom: 1px solid rgba(var(--primary-color-rgb), 0.2);
+  padding-bottom: 10px;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.bookHeader h3 {
+  margin: 0;
+  color: var(--heading-color);
+  font-size: 1.5rem;
+}
+
+.companyName {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.responsibilities {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.responsibilityItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 8px 12px;
+  background: rgba(var(--primary-color-rgb), 0.05);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.responsibilityItem:hover {
+  background: rgba(var(--primary-color-rgb), 0.1);
+  transform: translateX(5px);
+}
+
+.responsibilityItem::before {
+  content: '•';
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .experienceSection {
+    margin-left: 0;
+    width: 100%;
+    padding: 4rem 1rem;
+  }
+  
+  .experienceTitle {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .experienceTitle::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .bookshelf {
+    gap: 15px;
+    padding: 10px 0;
+    isolation: isolate;
+  }
+  
+  .bookSpine {
+    width: 100%;
+    max-width: 100%;
+    height: 70px;
+    padding: 0 15px;
+    border-radius: 5px;
+    transform-origin: center;
+    z-index: 5;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+  }
+  
+  .bookSpine:hover {
+    transform: none;
+  }
+  
+  /* Удаляем это правило, которое делает карточку синей при активации */
+  /* .bookSpine:active {
+    background-color: var(--primary-color);
+  } */
+  
+  .spineContent {
+    width: 60%;
+    pointer-events: none;
+  }
+  
+  .spinePeriod {
+    width: 40%;
+    max-width: 40%;
+    font-size: 0.7rem;
+    white-space: normal;
+    min-height: 30px;
+    pointer-events: none;
+  }
+  
+  .spineTitle {
+    font-size: 1rem;
+    pointer-events: none;
+  }
+  
+  .spineCompany {
+    font-size: 0.8rem;
+    pointer-events: none;
+  }
+  
+  .bookSpineActive {
+    min-height: auto;
+    padding: 15px;
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 30;
+    touch-action: manipulation;
+    pointer-events: auto;
+    transform: none !important;
+  }
+  
+  .bookContent {
+    width: 100%;
+    padding: 5px;
+  }
+  
+  .bookHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    width: 100%;
+  }
+  
+  .bookHeader h3 {
+    font-size: 1.3rem;
+    width: 100%;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  .bookHeader span {
+    align-self: flex-start;
+    margin-top: 5px;
+    max-width: 100%;
+    overflow: visible;
+    white-space: normal;
+    font-size: 0.8rem;
+    padding: 3px 8px;
+    line-height: 1.3;
+    display: inline-block;
+    word-break: break-word;
+  }
+  
+  .companyName {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  
+  .responsibilities {
+    gap: 8px;
+    width: 100%;
+  }
+  
+  .responsibilityItem {
+    padding: 8px 10px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .responsibilityItem::before {
+    content: '•';
+    margin-right: 8px;
+    flex-shrink: 0;
+  }
+}
+
+/* Добавляем стили для планшетов */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .experienceSection {
+    margin-left: 0;
+    width: 100%;
+    padding: 5rem 2rem;
+  }
+  
+  .bookSpine {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .bookHeader {
+    flex-wrap: wrap;
+  }
+}
