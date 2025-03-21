@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { SvgIcon } from "@progress/kendo-react-common"
 import { Button } from "@progress/kendo-react-buttons"
 import { userIcon, folderIcon, homeIcon, envelopeIcon, arrowLeftIcon, arrowRightIcon } from "@progress/kendo-svg-icons"

@@ -1,4 +1,4 @@
-/* Добавляем обертку для сайдбара и стрелочки */
+
 .sidebarWrapper {
   position: fixed;
   left: 0;
@@ -8,11 +8,11 @@
 }
 
 .sidebar {
-  position: relative; /* Изменено с fixed на relative */
+  position: relative; 
   left: 0;
-  top: 0; /* Изменено с 70px на 0 */
+  top: 0; 
   width: 250px;
-  height: 100%; /* Изменено с calc(100vh - 70px) на 100% */
+  height: 100%;
   background: var(--sidebar-bg, rgba(255, 255, 255, 0.05));
   backdrop-filter: blur(10px);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);

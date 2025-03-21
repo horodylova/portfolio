@@ -5,7 +5,6 @@
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
 
-  /* Светлая тема (по умолчанию) */
   --primary-color: #6366f1;  
   --button-color: #ec4899;  
   --heading-color: #0f172a;  
@@ -50,10 +49,49 @@ body {
   color: var(--text-color);
 }
 
+html {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  overflow-y: scroll;
+}
+
+html::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
 body {
   background: linear-gradient(to bottom, var(--background-start), var(--background-end));
   min-height: 100vh;
+  overflow-y: visible;
 }
+
+.vertical-scroll-line {
+  position: fixed;
+  left: 350px;
+  top: 100px;
+  height: calc(100vh - 120px);
+  width: 3px;
+  background: linear-gradient(to bottom, transparent, var(--button-color), transparent);
+  z-index: 800;
+  transition: left 0.3s ease;
+  pointer-events: none; 
+}
+
+.scroll-indicator {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background-color: var(--button-color);
+  border-radius: 50%;
+  left: -5.5px;
+  transition: top 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 0 20px var(--button-color);
+  z-index: 801;
+  pointer-events: none; 
+}
+
 
 a {
   color: var(--primary-color);
@@ -124,19 +162,18 @@ svg {
   position: relative;
 }
 
-/* Вертикальная линия прокрутки */
+
 .vertical-scroll-line {
   position: fixed;
-  left: 270px; /* Чуть правее сайдбара */
-  top: 100px; /* Ниже хедера */
+  left: 350px;
+  top: 100px;
   height: calc(100vh - 120px);
   width: 3px;
   background: linear-gradient(to bottom, transparent, var(--button-color), transparent);
   z-index: 800;
-  transition: left 0.3s ease; /* Добавляем плавный переход */
+  transition: left 0.3s ease;
 }
 
-/* Индикатор текущей секции */
 .scroll-indicator {
   position: absolute;
   width: 12px;
@@ -144,11 +181,11 @@ svg {
   background-color: var(--button-color);
   border-radius: 50%;
   left: -4.5px;
-  transition: top 0.5s ease;
+  transition: top 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
   box-shadow: 0 0 20px var(--button-color);
+  z-index: 801; 
 }
 
-/* Позиции индикатора для разных секций */
 .scroll-indicator.hero {
   top: 10%;
 }
@@ -169,12 +206,10 @@ svg {
   top: 90%;
 }
 
-/* Когда сайдбар скрыт, линия прокрутки смещается влево */
 .sidebar-hidden .vertical-scroll-line {
-  left: 20px;
+  left: 70px;
 }
 
-/* Стили для контента при скрытом сайдбаре */
 .content {
   margin-left: 250px;
   transition: margin-left 0.3s ease;
@@ -186,9 +221,6 @@ svg {
   width: 100%;
 }
 
-/* Добавьте позиции для других секций по мере их добавления */
-
-/* Стили для активной секции */
 .active-section {
   position: relative;
 }
