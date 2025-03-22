@@ -17,8 +17,7 @@ const skillCategories = [
       { name: 'Vite', logo: '/vite.png' },
       { name: 'CSS', logo: '/css.jpeg' },
       { name: 'Webpack', logo: '/webpack.png' },
-      { name: 'Babel', logo: '/babel.png' },
-      { name: 'Jest', logo: '/jest.png' },
+      { name: 'Babel', logo: '/babel.png' }
     ]
   },
   {
@@ -32,6 +31,8 @@ const skillCategories = [
       { name: 'Node.js', logo: '/node.png' },
       { name: 'Linux', logo: '/linux.jpeg' },
       { name: 'Docker', logo: '/docker.jpeg' },
+      {name: "Kestra", logo: "/kestra.png"},
+      { name: 'Jest', logo: '/jest.png' }
     ]
   },
   {
