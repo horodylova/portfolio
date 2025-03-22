@@ -41,7 +41,7 @@ const CertificationItem = ({ cert }) => {
 
 const Certifications = () => {
   return (
-    <section className={styles.certificationsSection}>
+    <section id="certifications"  className={styles.certificationsSection}>
       <div className={styles.certificationsContainer}>
         <h2 className={styles.certificationsTitle}>My Certifications</h2>
         <div className={styles.certificationsGrid}>

@@ -1,9 +1,8 @@
 "use client"
-
 import { AppBar, AppBarSection } from "@progress/kendo-react-layout"
 import { Button } from "@progress/kendo-react-buttons"
 import { SvgIcon } from "@progress/kendo-react-common"
-import { homeIcon, userIcon, folderIcon, envelopeIcon } from "@progress/kendo-svg-icons"
+import { homeIcon, userIcon, folderIcon, envelopeIcon, fileIcon } from "@progress/kendo-svg-icons"
 import { useState, useEffect } from "react"
 import styles from './Header.module.css'
 
@@ -42,13 +41,18 @@ export default function Header() {
   }
 
   const menuItems = [
-    { text: "Summary", icon: userIcon },
-    { text: "Experience", icon: folderIcon },
-    { text: "Skills", icon: homeIcon },
-    { text: "Contact", icon: envelopeIcon }
+    { text: "Summary", icon: userIcon, sectionId: "summary" },
+    { text: "Experience", icon: folderIcon, sectionId: "experience" },
+    { text: "Certifications", icon: fileIcon, sectionId: "certifications" },
+    { text: "Skills", icon: homeIcon, sectionId: "skills" },
+    { text: "Contact", icon: envelopeIcon, sectionId: "contact" }
   ]
   
-  const handleMenuItemClick = () => {
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId)
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' })
+    }
     setIsDrawerOpen(false)
   }
 
@@ -65,12 +69,23 @@ export default function Header() {
         </AppBarSection>
  
         <AppBarSection className={styles.desktopNav}>
+          {menuItems.map((item, index) => (
+            <Button 
+              key={index}
+              look="flat"
+              className={styles.navItem}
+              onClick={() => scrollToSection(item.sectionId)}
+            >
+              {item.text}
+            </Button>
+          ))}
           <Button 
             look="outline"
             rounded="full"
             className={styles.contactButton}
+            onClick={() => scrollToSection('contact')}
           >
-            <SvgIcon icon={envelopeIcon} className={styles.contactIcon} />
+            {/* <SvgIcon icon={envelopeIcon} className={styles.contactIcon} /> */}
             Get in Touch
           </Button>
           <div className={styles.themeToggle}>
@@ -121,7 +136,7 @@ export default function Header() {
                 key={index} 
                 look="flat" 
                 className={styles.drawerItem}
-                onClick={handleMenuItemClick}
+                onClick={() => scrollToSection(item.sectionId)}
               >
                 <SvgIcon icon={item.icon} className={styles.drawerItemIcon} />
                 {item.text}
@@ -130,7 +145,7 @@ export default function Header() {
             <Button 
               look="primary" 
               className={styles.drawerContactButton}
-              onClick={handleMenuItemClick}
+              onClick={() => scrollToSection('contact')}
             >
               <SvgIcon icon={envelopeIcon} className={styles.drawerContactIcon} />
               <span className={styles.drawerContactText}>Get in Touch</span>

@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { SvgIcon } from "@progress/kendo-react-common"
 import { Button } from "@progress/kendo-react-buttons"
-import { userIcon, folderIcon, homeIcon, envelopeIcon, arrowLeftIcon, arrowRightIcon } from "@progress/kendo-svg-icons"
+import { userIcon, folderIcon, homeIcon, envelopeIcon, arrowLeftIcon, arrowRightIcon, fileIcon } from "@progress/kendo-svg-icons"
 import styles from './Sidebar.module.css'
 
 export default function Sidebar({ activeSection, setActiveSection, onToggle }) {
@@ -12,7 +12,8 @@ export default function Sidebar({ activeSection, setActiveSection, onToggle }) {
   
   const menuItems = [
     { text: "Summary", icon: userIcon, id: "summary" },
-    { text: "Projects", icon: folderIcon, id: "projects" },
+    { text: "Experience", icon: folderIcon, id: "experience" },
+    { text: "Сertifications", icon: fileIcon, id: "certifications" },
     { text: "Skills", icon: homeIcon, id: "skills" },
     { text: "Contact", icon: envelopeIcon, id: "contact" }
   ]
@@ -62,7 +63,6 @@ export default function Sidebar({ activeSection, setActiveSection, onToggle }) {
             className={styles.sidebarContactButton}
             onClick={() => handleNavItemClick('Contact', 'contact')}
           >
-            <SvgIcon icon={envelopeIcon} className={styles.sidebarContactIcon} />
             Get in Touch
           </Button>
         </div>
