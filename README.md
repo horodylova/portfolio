@@ -60,11 +60,9 @@ yarn dev
 portfolio/
 ├── public/          # Static assets
 ├── src/
-│   ├── app/         # Next.js app router
+│   ├── app/         # Next.js app 
 │   ├── components/  # React components
 │   ├── data/        # Data files for projects, skills, etc.
-│   ├── styles/      # Global styles
-│   └── utils/       # Utility functions
 ├── .gitignore
 ├── next.config.js
 ├── package.json
