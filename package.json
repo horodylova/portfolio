@@ -3,29 +3,24 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
-    "@progress/kendo-drawing": "^1.21.2",
     "@progress/kendo-licensing": "^1.5.1",
-    "@progress/kendo-react-animation": "^10.0.0",
     "@progress/kendo-react-buttons": "^10.0.0",
     "@progress/kendo-react-indicators": "^10.0.0",
-    "@progress/kendo-react-inputs": "^10.0.0",
-    "@progress/kendo-react-intl": "^10.0.0",
     "@progress/kendo-react-layout": "^10.0.0",
-    "@progress/kendo-react-listview": "^10.0.0",
-    "@progress/kendo-react-pdf": "^10.0.0",
     "@progress/kendo-react-popup": "^10.0.0",
-    "@progress/kendo-react-ripple": "^10.0.0",
-    "@progress/kendo-react-scrollview": "^10.0.0",
-    "@progress/kendo-react-tooltip": "^10.0.0",
-    "next": "15.2.1",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "@progress/kendo-theme-default": "^10.3.1",
+    "next": "14.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
