@@ -544,8 +544,6 @@
   }
 }
 
-
-/* Стили для интеграции с KendoReact */
 :global(.k-panelbar) {
   border: none;
   background: transparent;
@@ -568,7 +566,6 @@
   background-color: var(--primary-color);
 }
 
-/* Переопределяем стили для мобильной версии */
 @media (max-width: 768px) {
   .experienceSection {
     margin-left: 0;
