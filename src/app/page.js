@@ -4,6 +4,7 @@ import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 import Contact from "@/components/Contact";
 import Experience from "@/components/Experience";
+import Certifications from "@/components/Certifications";
 
 export default function Home() {
   return (
@@ -16,6 +17,9 @@ export default function Home() {
       </section>
       <section id="skills">
         <Skills />
+      </section>
+      <section id="certifications">
+        <Certifications />
       </section>
       <section id="contact">
         <Contact />
