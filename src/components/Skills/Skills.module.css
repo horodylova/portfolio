@@ -266,26 +266,3 @@
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
 }
-
-:global(.k-card) {
-  border: none;
-  background: var(--card-bg);
-}
-
-:global(.k-card-header) {
-  border-bottom: none;
-  padding: 0;
-}
-
-:global(.k-card-body) {
-  padding: 0;
-}
-
-:global(.k-chip.skillCount) {
-  background: rgba(255, 255, 255, 0.2);
-  color: white;
-  border: none;
-  font-size: 0.8rem;
-  padding: 3px 8px;
-  height: auto;
-}
