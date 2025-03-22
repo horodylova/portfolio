@@ -22,9 +22,10 @@
 }
 
 .logoContainer {
-  display: flex;
-  align-items: center;
+  position: relative;
+  z-index: 1010;  
 }
+
 
 .logo {
   font-size: 1.4rem;
@@ -491,18 +492,6 @@
   gap: 1rem;
 }
 
-.mobileDrawer {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 280px;
-  height: 100vh;
-  background: var(--drawer-bg);
-  z-index: 2000;
-  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-  animation: slideIn 0.3s ease;
-}
-
 @media (min-width: 768px) and (max-width: 900px) {
   .desktopNav {
     gap: 0.8rem;
@@ -541,6 +530,17 @@
 
   .scrolled {
     padding: 0.5rem 1rem;
+  }
+  
+  .logo {
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1.2;
+    gap: 0;
+  }
+  
+  .firstName, .lastName {
+    font-size: 1.1rem;
   }
 }
 
@@ -612,7 +612,7 @@
   max-width: 300px;
   height: 100vh;
   background-color: var(--drawer-bg);
-  z-index: 1100;
+  z-index: 1000;
   box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   overflow-y: auto;
