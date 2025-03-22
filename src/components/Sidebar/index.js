@@ -6,7 +6,7 @@ import { Button } from "@progress/kendo-react-buttons"
 import { userIcon, folderIcon, homeIcon, envelopeIcon, arrowLeftIcon, arrowRightIcon, fileIcon } from "@progress/kendo-svg-icons"
 import styles from './Sidebar.module.css'
 
-export default function Sidebar({ activeSection, setActiveSection, onToggle }) {
+export default function Sidebar({ onToggle }) {
   const [collapsed, setCollapsed] = useState(false)
   const [activeItem, setActiveItem] = useState('Summary')
   

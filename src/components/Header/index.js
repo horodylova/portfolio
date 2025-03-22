@@ -85,7 +85,7 @@ export default function Header() {
             className={styles.contactButton}
             onClick={() => scrollToSection('contact')}
           >
-            {/* <SvgIcon icon={envelopeIcon} className={styles.contactIcon} /> */}
+          
             Get in Touch
           </Button>
           <div className={styles.themeToggle}>
