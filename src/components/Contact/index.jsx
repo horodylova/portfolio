@@ -12,9 +12,11 @@ const Contact = () => {
     message: ''
   });
   const [errors, setErrors] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
   
   const handleChange = (e) => {
     const { name, value } = e.target;
+    
     setFormData(prev => ({
       ...prev,
       [name]: value
@@ -53,15 +55,40 @@ const Contact = () => {
     return Object.keys(newErrors).length === 0;
   };
   
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     
     if (validateForm()) {
-       const subject = encodeURIComponent(`Portfolio Contact: ${formData.subject}`);
-      const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage: ${formData.message}`);
-      window.location.href = `mailto:hordylova.sv@gmail.com?subject=${subject}&body=${body}`;
+      setIsSubmitting(true);
       
-      setFormSubmitted(true);
+      try {
+        const formData = new FormData(e.target);
+        const response = await fetch("https://formspree.io/f/xdkegoea", {
+          method: "POST",
+          body: formData,
+          headers: {
+            Accept: "application/json",
+          },
+        });
+        
+        if (response.ok) {
+          console.log('Form submitted successfully');
+          setFormSubmitted(true);
+          setFormData({
+            name: '',
+            email: '',
+            subject: '',
+            message: ''
+          });
+        } else {
+          throw new Error('Form submission failed');
+        }
+      } catch (error) {
+        console.error('Failed to send email:', error);
+        alert('Failed to send email. Please try again later.');
+      } finally {
+        setIsSubmitting(false);
+      }
     }
   };
 
@@ -169,8 +196,9 @@ const Contact = () => {
                   <button
                     type="submit"
                     className={styles.submitButton}
+                    disabled={isSubmitting}
                   >
-                    Send Message
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
                   </button>
                 </div>
               </form>

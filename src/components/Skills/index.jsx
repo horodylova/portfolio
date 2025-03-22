@@ -52,6 +52,8 @@ const skillCategories = [
       { name: 'OpenAI', logo: '/openAI.jpg' },
       { name: 'Hugging Face', logo: '/hugging_face.jpeg' },
       { name: 'Azure AI', logo: '/azure-ai-studio-logo.png' },
+      { name: 'Agent AI', logo: '/agent-ai.webp' },
+      { name: 'Crew AI', logo: '/Crew-AI-Logo_cropped-1024x504.webp' },
     ]
   },
   {

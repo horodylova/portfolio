@@ -87,10 +87,22 @@
   font-weight: 500;
 }
 
+/* Стили для GitHub */
+.socialLink:nth-child(1) {
+  background-color: #24292e;
+  color: white;
+}
+
+/* Стили для LinkedIn */
+.socialLink:nth-child(2) {
+  background-color: #0077b5;
+  color: white;
+}
+
 .socialLink:hover {
   transform: translateY(-3px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-  background-color: var(--button-hover-bg);
+  opacity: 0.9;
 }
 
 .socialIcon {
@@ -286,10 +298,9 @@
   box-shadow: inset 0 1px 3px var(--card-shadow);
 }
 
-/* Делаем поля ввода светлее в темной теме */
 [data-theme='dark'] .formInput, 
 [data-theme='dark'] .formTextarea {
-  background-color: #2a3649; /* Немного светлее, чем --background-end в темной теме */
+  background-color: #2a3649;  
   border-color: #3a4659;
 }
 

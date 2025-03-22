@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@progress/kendo-drawing": "^1.21.2",
     "@progress/kendo-licensing": "^1.5.1",
     "@progress/kendo-react-animation": "^10.0.0",
