@@ -148,7 +148,7 @@ const Contact = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className={styles.formInput}
+                    className={`${styles.formInput} ${styles.inputField}`}
                   />
                   {errors.name && <div className={styles.errorMessage}>{errors.name}</div>}
                 </div>
@@ -186,7 +186,7 @@ const Contact = () => {
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
-                    className={styles.formTextarea}
+                    className={`${styles.formTextarea} ${styles.textareaField}`}
                     rows="5"
                   ></textarea>
                   {errors.message && <div className={styles.errorMessage}>{errors.message}</div>}

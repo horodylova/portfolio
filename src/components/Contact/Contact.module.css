@@ -87,13 +87,11 @@
   font-weight: 500;
 }
 
-/* Стили для GitHub */
 .socialLink:nth-child(1) {
   background-color: #24292e;
   color: white;
 }
 
-/* Стили для LinkedIn */
 .socialLink:nth-child(2) {
   background-color: #0077b5;
   color: white;
@@ -125,41 +123,10 @@
   gap: 20px;
 }
 
-.formElement .k-form-field {
-  margin-bottom: 0;
-}
-
-.formElement .k-form-field-wrap {
-  margin-bottom: 0;
-}
-
 .formActions {
   display: flex;
   justify-content: flex-end;
   margin-top: 10px;
-}
-
-.submitButton {
-  background-color: var(--button-color) !important;
-  color: white !important;
-  border: none !important;
-  padding: 10px 25px !important;
-  font-size: 1rem !important;
-  border-radius: 8px !important;
-  transition: all 0.3s ease !important;
-}
-
-.submitButton:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-  background-color: var(--button-hover-color) !important;
-}
-
-.submitButton:disabled {
-  opacity: 0.7;
-  cursor: not-allowed;
-  transform: none;
-  box-shadow: none;
 }
 
 .thankYouMessage {
@@ -195,14 +162,14 @@
   background-color: var(--button-hover-color) !important;
 }
 
-.contactForm :global(.k-input) {
+.inputField {
   background-color: var(--input-bg) !important;
   color: var(--text-color) !important;
   border-color: var(--border-color) !important;
   margin-bottom: 20px !important;
 }
 
-.contactForm :global(.k-textarea) {
+.textareaField {
   background-color: var(--input-bg) !important;
   color: var(--text-color) !important;
   border-color: var(--border-color) !important;
@@ -210,25 +177,25 @@
   margin-bottom: 20px !important;
 }
 
-.contactForm :global(.k-floating-label-container) {
+.labelContainer {
   width: 100% !important;
   margin-bottom: 20px !important;
 }
 
-.contactForm :global(.k-form-field) {
+.formField {
   margin-bottom: 20px !important;
 }
 
-.contactForm :global(.k-form-field > .k-label) {
+.fieldLabel {
   margin-bottom: 8px !important;
   display: block !important;
   font-weight: 500 !important;
   color: var(--text-color) !important;
 }
 
-.contactForm :global(.k-input:focus), .contactForm :global(.k-textarea:focus) {
+.focusedInput, .focusedTextarea {
   border-color: var(--button-color) !important;
-  box-shadow: 0 0 0 2px rgba(var(--button-color-rgb), 0.25) !important;
+  box-shadow: 0 0 0 2px rgba(236, 72, 153, 0.25) !important;
 }
 
 @media (max-width: 768px) {
