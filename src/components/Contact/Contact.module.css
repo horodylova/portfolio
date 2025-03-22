@@ -195,14 +195,14 @@
   background-color: var(--button-hover-color) !important;
 }
 
-:global(.k-input) {
+.contactForm :global(.k-input) {
   background-color: var(--input-bg) !important;
   color: var(--text-color) !important;
   border-color: var(--border-color) !important;
   margin-bottom: 20px !important;
 }
 
-:global(.k-textarea) {
+.contactForm :global(.k-textarea) {
   background-color: var(--input-bg) !important;
   color: var(--text-color) !important;
   border-color: var(--border-color) !important;
@@ -210,23 +210,23 @@
   margin-bottom: 20px !important;
 }
 
-:global(.k-floating-label-container) {
+.contactForm :global(.k-floating-label-container) {
   width: 100% !important;
   margin-bottom: 20px !important;
 }
 
-:global(.k-form-field) {
+.contactForm :global(.k-form-field) {
   margin-bottom: 20px !important;
 }
 
-:global(.k-form-field > .k-label) {
+.contactForm :global(.k-form-field > .k-label) {
   margin-bottom: 8px !important;
   display: block !important;
   font-weight: 500 !important;
   color: var(--text-color) !important;
 }
 
-:global(.k-input:focus), :global(.k-textarea:focus) {
+.contactForm :global(.k-input:focus), .contactForm :global(.k-textarea:focus) {
   border-color: var(--button-color) !important;
   box-shadow: 0 0 0 2px rgba(var(--button-color-rgb), 0.25) !important;
 }
@@ -346,3 +346,16 @@
   transform: none;
   box-shadow: none;
 }
+
+.loaderContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submitting {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ 
