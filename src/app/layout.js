@@ -53,6 +53,9 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
+      <head>
+      <link rel="icon" href="/portfolio-favicon.svg" type="image/svg+xml" />
+      </head>
       <body className={inter.className}>
         <Header setActiveSection={setActiveSection} />
         <div className={`main-container ${sidebarCollapsed ? 'sidebar-hidden' : ''}`}>
