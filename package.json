@@ -21,6 +21,7 @@
     "@progress/kendo-react-layout": "^10.0.0",
     "@progress/kendo-react-listview": "^10.0.0",
     "@progress/kendo-react-pdf": "^10.0.0",
+    "@progress/kendo-react-progressbars": "^10.0.0",
     "@progress/kendo-react-ripple": "^10.0.0",
     "@progress/kendo-react-scrollview": "^10.0.0",
     "@progress/kendo-react-tooltip": "^10.0.0",

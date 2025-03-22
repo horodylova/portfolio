@@ -62,7 +62,17 @@ export default function Header() {
         <AppBarSection className={styles.headerLeft}>
           <div className={styles.logoContainer}>
             <span className={styles.logo}>
-              <span className={styles.firstName}>Svitlana</span>
+              <span 
+                className={styles.firstName}
+                style={{
+                  background: 'linear-gradient(90deg, var(--primary-color), var(--button-color))',
+                  WebkitBackgroundClip: 'text',
+                  backgroundClip: 'text',
+                  color: 'transparent'
+                }}
+              >
+                Svitlana
+              </span>
               <span className={styles.lastName}>Horodylova</span>
             </span>
           </div>
