@@ -1,14 +1,6 @@
 import React, { useState } from 'react';
-import { 
-  Accordion, 
-  AccordionItem, 
-  PanelBar, 
-  PanelBarItem,
-  Slide
-} from '@progress/kendo-react-layout';
+
 import { Fade } from '@progress/kendo-react-animation';
-import { Chip } from '@progress/kendo-react-buttons';
-import { StackLayout } from '@progress/kendo-react-layout';
 import { Badge } from '@progress/kendo-react-indicators';
 import styles from './Experience.module.css';
 
