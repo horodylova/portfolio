@@ -1,5 +1,6 @@
 "use client"
-import React from 'react';
+import React, { useState, useRef } from 'react';
+import { Popup } from '@progress/kendo-react-popup';
 import styles from './Certifications.module.css';
 
 const certifications = [
@@ -16,12 +17,21 @@ const certifications = [
 ];
 
 const CertificationItem = ({ cert }) => {
+  const [showPopup, setShowPopup] = useState(false);
+  const anchorRef = useRef(null);
+  
   const handleClick = () => {
     window.open(cert.path, '_blank');
   };
   
   return (
-    <div className={styles.certItem} onClick={handleClick}>
+    <div 
+      className={styles.certItem} 
+      onClick={handleClick}
+      onMouseEnter={() => setShowPopup(true)}
+      onMouseLeave={() => setShowPopup(false)}
+      ref={anchorRef}
+    >
       <div className={styles.certCard}>
         <img 
           src={cert.path} 
@@ -35,13 +45,26 @@ const CertificationItem = ({ cert }) => {
           </div>
         </div>
       </div>
+      
+      {showPopup && (
+        <Popup
+          anchor={anchorRef.current}
+          show={showPopup}
+          popupClass={styles.certPopup}
+          animate={true}
+        >
+          <div className={styles.popupContent}>
+            {cert.name}
+          </div>
+        </Popup>
+      )}
     </div>
   );
 };
 
 const Certifications = () => {
   return (
-    <section id="certifications"  className={styles.certificationsSection}>
+    <section id="certifications" className={styles.certificationsSection}>
       <div className={styles.certificationsContainer}>
         <h2 className={styles.certificationsTitle}>My Certifications</h2>
         <div className={styles.certificationsGrid}>
