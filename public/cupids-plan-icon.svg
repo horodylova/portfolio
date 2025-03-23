@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Фон -->
+  <rect width="200" height="200" fill="#f5f5f5"/>
+  
+  <!-- Сердце -->
+  <path d="M100 130 C130 100, 170 110, 160 150 C150 180, 110 170, 100 130 C90 170, 50 180, 40 150 C30 110, 70 100, 100 130" fill="#f472b6"/>
+  
+  <!-- Микросхема ИИ внутри сердца -->
+  <rect x="80" y="120" width="40" height="40" rx="5" fill="#818cf8"/>
+  <rect x="85" y="125" width="30" height="5" rx="2" fill="white" opacity="0.8"/>
+  <rect x="85" y="135" width="30" height="5" rx="2" fill="white" opacity="0.8"/>
+  <rect x="85" y="145" width="30" height="5" rx="2" fill="white" opacity="0.8"/>
+  <rect x="85" y="155" width="30" height="5" rx="2" fill="white" opacity="0.8"/>
+  
+  <!-- Стрелы Купидона -->
+  <line x1="40" y1="70" x2="85" y2="115" stroke="#818cf8" stroke-width="3"/>
+  <polygon points="85,115 75,105 80,120" fill="#818cf8"/>
+  
+  <line x1="160" y1="70" x2="115" y2="115" stroke="#818cf8" stroke-width="3"/>
+  <polygon points="115,115 125,105 120,120" fill="#818cf8"/>
+  
+  <!-- Календарь свидания -->
+  <rect x="140" y="40" width="30" height="30" rx="3" fill="white" stroke="#f472b6" stroke-width="2"/>
+  <line x1="140" y1="50" x2="170" y2="50" stroke="#f472b6" stroke-width="1"/>
+  <circle cx="148" cy="58" r="3" fill="#f472b6"/>
+  <circle cx="155" cy="58" r="3" fill="#f472b6"/>
+  <circle cx="162" cy="58" r="3" fill="#f472b6" opacity="0.5"/>
+  
+  <!-- Купидон (стилизованный) -->
+  <circle cx="40" cy="50" r="15" fill="#f472b6"/>
+  <rect x="35" y="40" width="10" height="15" rx="5" fill="#f5f5f5"/>
+  <circle cx="40" cy="45" r="5" fill="#f5f5f5"/>
+</svg>

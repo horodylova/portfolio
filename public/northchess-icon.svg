@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Фон -->
+  <rect width="200" height="200" fill="#f5f5f5"/>
+  
+  <!-- Шахматная доска (уголок) -->
+  <rect x="50" y="50" width="100" height="100" fill="#818cf8" opacity="0.3"/>
+  
+  <!-- Шахматные клетки -->
+  <rect x="50" y="50" width="25" height="25" fill="#818cf8"/>
+  <rect x="100" y="50" width="25" height="25" fill="#818cf8"/>
+  <rect x="75" y="75" width="25" height="25" fill="#818cf8"/>
+  <rect x="125" y="75" width="25" height="25" fill="#818cf8"/>
+  <rect x="50" y="100" width="25" height="25" fill="#818cf8"/>
+  <rect x="100" y="100" width="25" height="25" fill="#818cf8"/>
+  <rect x="75" y="125" width="25" height="25" fill="#818cf8"/>
+  <rect x="125" y="125" width="25" height="25" fill="#818cf8"/>
+  
+  <!-- Логотип Flutter -->
+  <rect x="160" y="30" width="20" height="20" rx="5" fill="#818cf8" opacity="0.7"/>
+  <rect x="155" y="35" width="20" height="20" rx="5" fill="#818cf8" opacity="0.9"/>
+  
+  <!-- Шахматная фигура - Король -->
+  <path d="M100 75 L95 85 L90 85 L90 90 L95 90 L95 95 L90 100 L95 105 L85 115 L115 115 L105 105 L110 100 L105 95 L105 90 L110 90 L110 85 L105 85 Z" fill="#f472b6"/>
+  <rect x="90" y="115" width="20" height="5" rx="1" fill="#f472b6"/>
+  
+  <!-- Подсветка хода -->
+  <circle cx="125" cy="95" r="10" fill="#f472b6" opacity="0.3"/>
+  <circle cx="125" cy="95" r="8" fill="none" stroke="#f472b6" stroke-width="2" stroke-dasharray="2 2"/>
+  
+  <!-- Стрелка анимации хода -->
+  <path d="M105 95 C115 90, 120 90, 125 95" stroke="#f472b6" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <polygon points="125,95 120,90 130,90" fill="#f472b6"/>
+</svg>

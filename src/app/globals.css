@@ -229,25 +229,25 @@ svg {
 
 @media (max-width: 768px) {
   .vertical-scroll-line {
-    left: 10px; /* Уменьшаем отступ слева */
+    left: 10px; 
   }
   
   .content {
-    margin-left: 0; /* Убираем отступ для контента */
-    width: 100%; /* Контент занимает всю ширину */
-    padding-left: 20px; /* Небольшой отступ слева для контента */
+    margin-left: 0; 
+    width: 100%; 
+    padding-left: 20px; 
   }
 }
 
-/* Добавляем стили для планшетов */
+
 @media (min-width: 769px) and (max-width: 1024px) {
   .vertical-scroll-line {
-    left: 20px; /* Уменьшаем отступ слева для планшетов */
+    left: 20px; 
   }
   
   .content {
-    margin-left: 0; /* Убираем отступ для контента */
-    width: 100%; /* Контент занимает всю ширину */
-    padding-left: 30px; /* Небольшой отступ слева для контента */
+    margin-left: 0;
+    width: 100%; 
+    padding-left: 30px; 
   }
 }

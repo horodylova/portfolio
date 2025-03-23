@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Ice cream cone -->
+  <path d="M13 18 L16 32 L19 18 Z" fill="#d4a76a" />
+
+  <!-- Blue ice cream scoop -->
+  <circle cx="16" cy="14" r="8" fill="#818cf8" />
+
+  <!-- Pink ice cream scoop -->
+  <circle cx="16" cy="8" r="7" fill="#f472b6" />
+
+  <!-- Highlight details -->
+  <circle cx="14" cy="6" r="1.5" fill="white" opacity="0.7" />
+  <circle cx="18" cy="12" r="1" fill="white" opacity="0.5" />
+  
+  <!-- Drip detail -->
+  <path d="M12 15 L10 18 L12 17 Z" fill="#f472b6" />
+  <path d="M20 15 L22 18 L20 17 Z" fill="#818cf8" />
+</svg>

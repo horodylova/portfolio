@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Фон -->
+  <rect width="200" height="200" fill="#f5f5f5"/>
+  
+  <!-- Стакан воды -->
+  <path d="M65 50 L135 50 L125 140 L75 140 Z" fill="none" stroke="#818cf8" stroke-width="3"/>
+  
+  <!-- Уровень воды анимация -->
+  <path d="M65 50 L135 50 L125 140 L75 140 Z" fill="#818cf8" opacity="0.2"/>
+  <path d="M75 140 L125 140 L123 120 L77 120 Z" fill="#818cf8" opacity="0.3"/>
+  <path d="M77 120 L123 120 L121 100 L79 100 Z" fill="#818cf8" opacity="0.4"/>
+  <path d="M79 100 L121 100 L119 80 L81 80 Z" fill="#818cf8" opacity="0.5"/>
+  
+  <!-- График потребления -->
+  <rect x="40" y="160" width="120" height="1" fill="#818cf8"/>
+  <rect x="40" y="160" width="1" height="30" fill="#818cf8"/>
+  
+  <!-- Линия графика -->
+  <path d="M40 175 C60 160, 80 180, 100 170 C120 160, 140 180, 160 165" stroke="#f472b6" stroke-width="2" fill="none"/>
+  <circle cx="40" cy="175" r="3" fill="#f472b6"/>
+  <circle cx="70" cy="170" r="3" fill="#f472b6"/>
+  <circle cx="100" cy="170" r="3" fill="#f472b6"/>
+  <circle cx="130" cy="175" r="3" fill="#f472b6"/>
+  <circle cx="160" cy="165" r="3" fill="#f472b6"/>
+  
+  <!-- Капли воды -->
+  <path d="M155 50 C160 40, 170 40, 175 50 C180 60, 170 70, 165 70 C160 70, 150 60, 155 50" fill="#818cf8" opacity="0.7"/>
+  <path d="M40 40 C43 33, 50 33, 53 40 C56 47, 50 54, 46 54 C43 54, 37 47, 40 40" fill="#818cf8" opacity="0.7"/>
+  
+  <!-- Иконка Node.js -->
+  <rect x="40" y="70" width="15" height="15" rx="2" fill="#818cf8" opacity="0.6"/>
+  <path d="M42 77 L53 77" stroke="white" stroke-width="1"/>
+  <path d="M42 73 L53 73" stroke="white" stroke-width="1"/>
+  <path d="M42 81 L53 81" stroke="white" stroke-width="1"/>
+  
+  <!-- Иконка React -->
+  <circle cx="145" cy="77" r="10" fill="none" stroke="#f472b6" stroke-width="1"/>
+  <circle cx="145" cy="77" r="3" fill="#f472b6"/>
+</svg>
