@@ -1,6 +1,5 @@
-# Svetlana Horodylova Portfolio
+# Svitlana Horodylova Portfolio
 
-![Portfolio Preview](/public/portfolio-preview.png)
 
 ## Overview
 
