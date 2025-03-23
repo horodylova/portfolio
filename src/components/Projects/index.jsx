@@ -30,8 +30,7 @@ const ProjectItem = ({ dataItem }) => {
     </Card>
   );
 };
-
-// Функция для разбиения массива на подмассивы определенного размера
+ 
 const chunkArray = (array, chunkSize) => {
   const result = [];
   for (let i = 0; i < array.length; i += chunkSize) {
@@ -42,8 +41,7 @@ const chunkArray = (array, chunkSize) => {
 
 const Projects = () => {
   const { projects } = projectsData;
-  
-  // Разбиваем проекты на ряды по 3 проекта в каждом (или другое число)
+   
   const projectsPerRow = 3;
   const projectRows = chunkArray(projects, projectsPerRow);
   
