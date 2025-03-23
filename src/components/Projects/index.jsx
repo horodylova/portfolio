@@ -13,8 +13,8 @@ const ProjectItem = ({ dataItem }) => {
     <Card className={styles.projectCard}>
       <div className={styles.projectImageWrapper}>
         <img 
-          src={dataItem.image} 
-          alt={dataItem.title} 
+          src={dataItem.image}
+          alt={dataItem.title}
           className={styles.projectImage}
         />
       </div>
@@ -31,21 +31,38 @@ const ProjectItem = ({ dataItem }) => {
   );
 };
 
+// Функция для разбиения массива на подмассивы определенного размера
+const chunkArray = (array, chunkSize) => {
+  const result = [];
+  for (let i = 0; i < array.length; i += chunkSize) {
+    result.push(array.slice(i, i + chunkSize));
+  }
+  return result;
+};
+
 const Projects = () => {
   const { projects } = projectsData;
-
+  
+  // Разбиваем проекты на ряды по 3 проекта в каждом (или другое число)
+  const projectsPerRow = 3;
+  const projectRows = chunkArray(projects, projectsPerRow);
+  
   return (
     <section id="projects" className={styles.projectsSection}>
       <div className={styles.projectsContainer}>
         <h2 className={styles.projectsTitle}>My Projects</h2>
-        <ScrollView
-          className={styles.scrollView}
-        >
-          <ListView
-            data={projects}
-            item={ProjectItem}
-            className={styles.listView}
-          />
+        <ScrollView className={styles.scrollView}>
+          <div className={styles.projectRows}>
+            {projectRows.map((rowProjects, rowIndex) => (
+              <div key={rowIndex} className={styles.projectRow}>
+                <ListView
+                  data={rowProjects}
+                  item={ProjectItem}
+                  className={styles.listView}
+                />
+              </div>
+            ))}
+          </div>
         </ScrollView>
       </div>
     </section>

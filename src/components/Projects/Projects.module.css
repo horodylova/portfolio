@@ -24,27 +24,32 @@
   overflow: visible;
 }
 
+.projectRows {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+}
+
+.projectRow {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
 .listView {
   display: flex;
-  flex-wrap: wrap;
   gap: 20px;
   width: 100%;
-  padding: 10px 0;
-  justify-content: space-between;
 }
 
 .projectCard {
-  flex: 0 0 calc(33.333% - 20px);
-  min-width: 300px;
-  max-width: 450px;
-  height: auto;
-  min-height: 120px;
+  flex: 1;
+  min-width: 0;
   background-color: var(--card-bg);
   border-radius: var(--border-radius);
   box-shadow: 0 4px 8px var(--card-shadow);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
-  margin-bottom: 10px;
   padding: 15px;
   display: flex;
   flex-direction: row-reverse;
@@ -52,16 +57,9 @@
   gap: 15px;
 }
 
-@media (max-width: 1200px) {
-  .projectCard {
-    flex: 0 0 calc(50% - 20px);
-  }
-}
-
-@media (max-width: 768px) {
-  .projectCard {
-    flex: 0 0 100%;
-  }
+.projectCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px var(--card-shadow);
 }
 
 .projectsTitle {
@@ -83,42 +81,6 @@
   width: 70%;
   height: 3px;
   background: linear-gradient(to right, var(--button-color), transparent);
-}
-
-.scrollView {
-  width: 100%;
-  height: auto;
-  padding: 0;
-  overflow: visible;
-}
-
-.listView {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 20px;
-  width: 100%;
-  padding: 10px 0;
-}
-
-.projectCard {
-  height: auto;
-  min-height: 120px;
-  background-color: var(--card-bg);
-  border-radius: var(--border-radius);
-  box-shadow: 0 4px 8px var(--card-shadow);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden;
-  margin-bottom: 10px;
-  padding: 15px;
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: flex-start;
-  gap: 15px;
-}
-
-.projectCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px var(--card-shadow);
 }
 
 .projectImageWrapper {
@@ -195,7 +157,11 @@
   }
   
   .listView {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+  }
+  
+  .projectCard {
+    width: 100%;
   }
 }
 
@@ -205,15 +171,4 @@
     width: 100%;
     padding: 5rem 2rem;
   }
-}
-
-.projectButton a {
-  color: white;
-  text-decoration: none;
-}
-
-.pager {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
 }
