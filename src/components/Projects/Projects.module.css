@@ -17,6 +17,53 @@
   width: 100%;
 }
 
+.scrollView {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  overflow: visible;
+}
+
+.listView {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  padding: 10px 0;
+  justify-content: space-between;
+}
+
+.projectCard {
+  flex: 0 0 calc(33.333% - 20px);
+  min-width: 300px;
+  max-width: 450px;
+  height: auto;
+  min-height: 120px;
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 8px var(--card-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  margin-bottom: 10px;
+  padding: 15px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+@media (max-width: 1200px) {
+  .projectCard {
+    flex: 0 0 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .projectCard {
+    flex: 0 0 100%;
+  }
+}
+
 .projectsTitle {
   font-family: "Comfortaa", sans-serif;
   color: var(--heading-color);
