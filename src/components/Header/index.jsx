@@ -43,8 +43,9 @@ export default function Header() {
   const menuItems = [
     { text: "Summary", icon: userIcon, sectionId: "summary" },
     { text: "Experience", icon: folderIcon, sectionId: "experience" },
-    { text: "Certifications", icon: fileIcon, sectionId: "certifications" },
     { text: "Skills", icon: homeIcon, sectionId: "skills" },
+    { text: "Projects", icon: fileIcon, sectionId: "projects" },
+    { text: "Certifications", icon: fileIcon, sectionId: "certifications" },
     { text: "Contact", icon: envelopeIcon, sectionId: "contact" }
   ]
   

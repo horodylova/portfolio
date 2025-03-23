@@ -13,6 +13,7 @@ export default function Sidebar({ onToggle }) {
   const menuItems = [
     { text: "Summary", icon: userIcon, id: "summary" },
     { text: "Experience", icon: folderIcon, id: "experience" },
+    { text: "Projects", icon: fileIcon, id: "projects" },
     { text: "Skills", icon: homeIcon, id: "skills" },
     { text: "Сertifications", icon: fileIcon, id: "certifications" },
     { text: "Contact", icon: envelopeIcon, id: "contact" }
