@@ -16,7 +16,6 @@ export default function Sidebar({ onToggle }) {
     { text: "Projects", icon: fileIcon, id: "projects" },
     { text: "Skills", icon: homeIcon, id: "skills" },
     { text: "Сertifications", icon: fileIcon, id: "certifications" },
-    { text: "Contact", icon: envelopeIcon, id: "contact" }
   ]
   
   const toggleSidebar = () => {
