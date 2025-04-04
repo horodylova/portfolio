@@ -46,7 +46,6 @@ export default function Header() {
     { text: "Skills", icon: homeIcon, sectionId: "skills" },
     { text: "Projects", icon: fileIcon, sectionId: "projects" },
     { text: "Certifications", icon: fileIcon, sectionId: "certifications" },
-    { text: "Contact", icon: envelopeIcon, sectionId: "contact" }
   ]
   
   const scrollToSection = (sectionId) => {
