@@ -14,6 +14,7 @@ const certifications = [
   { id: 8, name: 'Microsoft Azure AI Essentials Workloads and Machine Learning on Azure', path: '/Microsoft Azure AI Essentials Workloads and Machine Learning on Azure.png' },
   { id: 9, name: 'Notrhcoders Software Development', path: '/Notrhcoders Software Development.png' },
   { id: 10, name: 'Working with text-based Artificial Intelligence', path: '/Working with text-based Artificial Intelligence.png' },
+  { id: 11, name: 'Front-End Development', path: '/beetroot.png' },
 ];
 
 const CertificationItem = ({ cert }) => {
