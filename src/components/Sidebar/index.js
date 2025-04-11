@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { SvgIcon } from "@progress/kendo-react-common"
 import { Button } from "@progress/kendo-react-buttons"
-import { userIcon, folderIcon, homeIcon, envelopeIcon, arrowLeftIcon, arrowRightIcon, fileIcon } from "@progress/kendo-svg-icons"
+import { userIcon, folderIcon, homeIcon, arrowLeftIcon, arrowRightIcon, fileIcon } from "@progress/kendo-svg-icons"
 import styles from './Sidebar.module.css'
 
 export default function Sidebar({ onToggle }) {
@@ -12,9 +12,10 @@ export default function Sidebar({ onToggle }) {
   
   const menuItems = [
     { text: "Summary", icon: userIcon, id: "summary" },
+    { text: "GitHub Analytics", icon: homeIcon, id: "github-analytics" },
     { text: "Experience", icon: folderIcon, id: "experience" },
-    { text: "Projects", icon: fileIcon, id: "projects" },
     { text: "Skills", icon: homeIcon, id: "skills" },
+    { text: "Projects", icon: fileIcon, id: "projects" },
     { text: "Сertifications", icon: fileIcon, id: "certifications" },
   ]
   

@@ -1,0 +1,110 @@
+.githubAnalyticsSection {
+  padding: 6rem 2rem;
+  position: relative;
+  margin-left: 250px;
+  width: calc(100% - 250px);
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
+.githubAnalyticsContainer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.analyticsTitle {
+  font-family: "Comfortaa", sans-serif;
+  color: var(--heading-color);
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.analyticsTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 70%;
+  height: 3px;
+  background: linear-gradient(to right, var(--button-color), transparent);
+}
+
+.chartSection {
+  margin-bottom: 50px;
+  padding: 20px;
+  border-radius: var(--border-radius);
+  background-color: var(--card-bg);
+  box-shadow: 0 4px 8px var(--card-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.chartSection:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px var(--card-shadow);
+}
+
+.chartDescription {
+  text-align: center;
+  margin-top: 15px;
+  font-style: italic;
+  color: var(--text-color);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.chartFootnote {
+  text-align: right;
+  font-size: 0.8rem;
+  color: var(--text-color);
+  margin-top: 30px;
+}
+
+.loading, .error, .noData {
+  text-align: center;
+  padding: 50px;
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  color: var(--text-color);
+  box-shadow: 0 4px 8px var(--card-shadow);
+}
+
+.error {
+  color: #d32f2f;
+}
+
+@media (max-width: 768px) {
+  .githubAnalyticsSection {
+    margin-left: 0;
+    width: 100%;
+    padding: 4rem 1rem;
+  }
+  
+  .analyticsTitle {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .analyticsTitle::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .githubAnalyticsSection {
+    margin-left: 0;
+    width: 100%;
+    padding: 5rem 2rem;
+  }
+}

@@ -1,8 +1,4 @@
 "use client"
-import { AppBar, AppBarSection } from "@progress/kendo-react-layout"
-import { Button } from "@progress/kendo-react-buttons"
-import { SvgIcon } from "@progress/kendo-react-common"
-import { homeIcon, userIcon, folderIcon, envelopeIcon, fileIcon } from "@progress/kendo-svg-icons"
 import { useState, useEffect } from "react"
 import styles from './Header.module.css'
 
@@ -41,11 +37,12 @@ export default function Header() {
   }
 
   const menuItems = [
-    { text: "Summary", icon: userIcon, sectionId: "summary" },
-    { text: "Experience", icon: folderIcon, sectionId: "experience" },
-    { text: "Skills", icon: homeIcon, sectionId: "skills" },
-    { text: "Projects", icon: fileIcon, sectionId: "projects" },
-    { text: "Certifications", icon: fileIcon, sectionId: "certifications" },
+    { text: "Summary", icon: "user", sectionId: "summary" },
+    { text: "GitHub Analytics", icon: "home", id: "github-analytics" },
+    { text: "Experience", icon: "folder", sectionId: "experience" },
+    { text: "Skills", icon: "home", sectionId: "skills" },
+    { text: "Projects", icon: "file", sectionId: "projects" },
+    { text: "Certifications", icon: "file", sectionId: "certifications" },
   ]
   
   const scrollToSection = (sectionId) => {
@@ -56,10 +53,27 @@ export default function Header() {
     setIsDrawerOpen(false)
   }
 
+   const renderIcon = (iconName) => {
+    switch(iconName) {
+      case 'user':
+        return <span className={styles.navIcon}>👤</span>
+      case 'folder':
+        return <span className={styles.navIcon}>📁</span>
+      case 'home':
+        return <span className={styles.navIcon}>🏠</span>
+      case 'file':
+        return <span className={styles.navIcon}>📄</span>
+      case 'envelope':
+        return <span className={styles.navIcon}>✉️</span>
+      default:
+        return null
+    }
+  }
+
   return (
     <>
-      <AppBar className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
-        <AppBarSection className={styles.headerLeft}>
+      <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
+        <div className={styles.headerLeft}>
           <div className={styles.logoContainer}>
             <span className={styles.logo}>
               <span 
@@ -76,28 +90,24 @@ export default function Header() {
               <span className={styles.lastName}>Horodylova</span>
             </span>
           </div>
-        </AppBarSection>
+        </div>
  
-        <AppBarSection className={styles.desktopNav}>
+        <nav className={styles.desktopNav}>
           {menuItems.map((item, index) => (
-            <Button 
+            <button 
               key={index}
-              look="flat"
-              className={styles.navItem}
+              className={styles.navButton}
               onClick={() => scrollToSection(item.sectionId)}
             >
               {item.text}
-            </Button>
+            </button>
           ))}
-          <Button 
-            look="outline"
-            rounded="full"
+          <button 
             className={styles.contactButton}
             onClick={() => scrollToSection('contact')}
           >
-          
             Get in Touch
-          </Button>
+          </button>
           <div className={styles.themeToggle}>
             <input 
               type="checkbox" 
@@ -106,9 +116,9 @@ export default function Header() {
               onChange={toggleTheme}
             />
           </div>
-        </AppBarSection>
+        </nav>
 
-        <AppBarSection className={styles.mobileMenu}>
+        <div className={styles.mobileMenu}>
           <div className={styles.mobileMenuControls}>
             <input 
               type="checkbox" 
@@ -116,50 +126,46 @@ export default function Header() {
               checked={darkMode}
               onChange={toggleTheme}
             />
-            <Button 
+            <button 
               className={styles.hamburger}
               onClick={() => setIsDrawerOpen(!isDrawerOpen)}
-              look="flat"
             >
               <span></span>
               <span></span>
               <span></span>
-            </Button>
+            </button>
           </div>
-        </AppBarSection>
-      </AppBar>
+        </div>
+      </header>
 
       {isDrawerOpen && (
         <div className={styles.mobileDrawer}>
           <div className={styles.drawerHeader}>
-            <Button 
+            <button 
               className={styles.closeButton}
               onClick={() => setIsDrawerOpen(false)}
-              look="flat"
             >
               ×
-            </Button>
+            </button>
           </div>
           <div className={styles.drawerContent}>
             {menuItems.map((item, index) => (
-              <Button 
+              <button 
                 key={index} 
-                look="flat" 
                 className={styles.drawerItem}
                 onClick={() => scrollToSection(item.sectionId)}
               >
-                <SvgIcon icon={item.icon} className={styles.drawerItemIcon} />
+                {renderIcon(item.icon)}
                 {item.text}
-              </Button>
+              </button>
             ))}
-            <Button 
-              look="primary" 
+            <button 
               className={styles.drawerContactButton}
               onClick={() => scrollToSection('contact')}
             >
-              <SvgIcon icon={envelopeIcon} className={styles.drawerContactIcon} />
+              {renderIcon('envelope')}
               <span className={styles.drawerContactText}>Get in Touch</span>
-            </Button>
+            </button>
           </div>
         </div>
       )}
