@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import {
   Chart,
   ChartTitle,
@@ -21,9 +21,20 @@ export default function GitHubRepositoriesAnalysis() {
   const [sizeData, setSizeData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [colors, setColors] = useState({
+    primaryColor: '#6366f1',  
+    buttonColor: '#ec4899'   
+  });
   
-   const primaryColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-color').trim();
-  const buttonColor = getComputedStyle(document.documentElement).getPropertyValue('--button-color').trim();
+   
+  useEffect(() => {
+   
+    if (typeof window !== 'undefined') {
+      const primaryColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-color').trim();
+      const buttonColor = getComputedStyle(document.documentElement).getPropertyValue('--button-color').trim();
+      setColors({ primaryColor, buttonColor });
+    }
+  }, []);
 
   useEffect(() => {
     async function fetchGitHubData() {
@@ -109,7 +120,7 @@ export default function GitHubRepositoriesAnalysis() {
                 type="column" 
                 data={timelineData.map(item => item.count)} 
                 name="New Repositories" 
-                color={primaryColor}
+                color={colors.primaryColor}
               />
             </ChartSeries>
             <ChartTooltip format="{0} repositories" />
@@ -134,7 +145,7 @@ export default function GitHubRepositoriesAnalysis() {
                 type="bar" 
                 data={sizeData.map(item => item.size)} 
                 name="Repository Size" 
-                color={buttonColor}
+                color={colors.buttonColor}
                 labels={{
                   visible: true,
                   format: "{0} KB"
