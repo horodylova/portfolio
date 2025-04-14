@@ -15,6 +15,11 @@ A modern, responsive portfolio website built with Next.js and React, showcasing 
 - **Project Gallery**: Showcase of completed projects with descriptions and links
 - **Certifications**: Display of professional certifications and achievements
 - **Contact Form**: Functional contact form for visitor inquiries
+- **GitHub Repository Analytics**: I chose to display:
+- The sizes of my repositories (highlighting the top 10 largest ones),
+- The number of repositories created over time
+  The data in my portfolio updates automatically with every new activity on GitHub.
+
 
 ## Technologies Used
 
