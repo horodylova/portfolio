@@ -39,4 +39,5 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-# telerik-license.txt
+telerik-license.txt
+telerik-license.txt
