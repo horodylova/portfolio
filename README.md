@@ -3,7 +3,7 @@
 
 ## Overview
 
-A modern, responsive portfolio website built with Next.js and React, showcasing my skills, experience, and projects as a frontend developer. The portfolio features a clean, intuitive design with smooth animations and interactive elements. Added  Kendo licence.
+A modern, responsive portfolio website built with Next.js and React, showcasing my skills, experience, and projects as a frontend developer. The portfolio features a clean, intuitive design with smooth animations and interactive elements. Added  Kendo licence. 
 
 ## Features
 
