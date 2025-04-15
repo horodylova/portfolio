@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "npx kendo-ui-license activate",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
