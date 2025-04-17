@@ -19,16 +19,13 @@ export async function GET(request) {
       }
       
       const repos = await reposResponse.json();
-      
-      console.log(`Found ${repos.length} repositories`);
-      console.log(`Repositories from 2025: ${repos.filter(repo => new Date(repo.created_at).getFullYear() === 2025).length}`);
+  
       
       return new Response(JSON.stringify(repos), {
         status: 200,
         headers: { 'Content-Type': 'application/json' }
       });
     } catch (error) {
-      console.error('Error fetching GitHub data:', error);
       return new Response(JSON.stringify({ error: error.message || 'Error during data retrieval from GitHub' }), {
         status: 500,
         headers: { 'Content-Type': 'application/json' }
