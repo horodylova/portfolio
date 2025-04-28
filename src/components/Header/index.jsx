@@ -9,10 +9,8 @@ export default function Header() {
   const [isBrowser, setIsBrowser] = useState(false)
 
   useEffect(() => {
-    // Set isBrowser to true once component mounts (we're in the browser)
     setIsBrowser(true)
     
-    // Only run this code in the browser
     const savedTheme = localStorage.getItem('theme')
     const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
     
@@ -29,7 +27,6 @@ export default function Header() {
   }, [])
 
   const toggleTheme = () => {
-    // Only run this code in the browser
     if (!isBrowser) return
     
     const newDarkMode = !darkMode

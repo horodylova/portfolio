@@ -12,7 +12,6 @@ export default function GitHubRepositoriesAnalysis() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // Use fallback project colors (should match your CSS variables)
   const primaryColor = '#6366f1';
   const buttonColor = '#ec4899';
 
@@ -75,7 +74,6 @@ export default function GitHubRepositoriesAnalysis() {
       <div className={styles.githubAnalyticsContainer}>
         <h2 className={styles.analyticsTitle}>GitHub Repository Analytics</h2>
         
-        {/* Timeline Chart */}
         <div className={styles.chartSection}>
           <ResponsiveContainer width="100%" height={350}>
             <BarChart
@@ -119,7 +117,6 @@ export default function GitHubRepositoriesAnalysis() {
           </div>
         </div>
         
-        {/* Top 10 Largest Repositories */}
         <div className={styles.chartSection}>
           <ResponsiveContainer width="100%" height={400}>
             <BarChart
