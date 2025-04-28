@@ -7,6 +7,12 @@
         "link": "https://textbuddy-fawn.vercel.app/"
       },
       {
+        "title": "Interactive map with graphs",
+        "description": "An interactive visualisation platform that combines geographical mapping with statistical data analysis.",
+        "image": "/map.svg",
+        "link": "https://map-for-portfolio-production.up.railway.app/"
+      },
+      {
         "title": "Special Letter",
         "description": "Fulstack project for people who want to write letters to themselves in the future. The server is on Node, the database is stored on Postgres. The client is written in React.",
         "image": "/special-letter-icon.svg",

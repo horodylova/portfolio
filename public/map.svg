@@ -1,0 +1,19 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Main Circle (Earth) -->
+  <circle cx="256" cy="256" r="240" fill="#ffffff" stroke="#6366f1" stroke-width="12"/>
+  
+  <!-- Latitude Lines -->
+  <path d="M256,16 C256,16 256,496 256,496" fill="none" stroke="#6366f1" stroke-width="4" stroke-opacity="0.5"/>
+  <path d="M16,256 C16,256 496,256 496,256" fill="none" stroke="#6366f1" stroke-width="4" stroke-opacity="0.5"/>
+  
+  <!-- Longitude Lines -->
+  <ellipse cx="256" cy="256" rx="190" ry="240" fill="none" stroke="#6366f1" stroke-width="4" stroke-opacity="0.5"/>
+  <ellipse cx="256" cy="256" rx="240" ry="190" fill="none" stroke="#6366f1" stroke-width="4" stroke-opacity="0.5"/>
+  
+  <!-- Continents (simplified) -->
+  <path d="M150,140 C170,120 210,130 240,125 C270,120 300,110 325,125 C350,140 310,180 290,200 C270,220 240,210 220,190 C200,170 130,160 150,140 Z" fill="#ec4899" opacity="0.8"/>
+  
+  <path d="M280,250 C300,230 330,240 350,260 C370,280 390,290 380,310 C370,330 340,320 320,310 C300,300 260,270 280,250 Z" fill="#ec4899" opacity="0.8"/>
+  
+  <path d="M180,320 C200,300 230,310 250,320 C270,330 280,350 260,360 C240,370 220,350 200,340 C180,330 160,340 180,320 Z" fill="#ec4899" opacity="0.8"/>
+</svg>
