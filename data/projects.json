@@ -14,55 +14,55 @@
       },
       {
         "title": "Interactive map with graphs",
-        "description": "An interactive visualisation platform that combines geographical mapping with statistical data analysis.",
+        "description": "Visualisation platform that combines geographical mapping with statistical data analysis",
         "image": "/map.svg",
         "link": "https://map-for-portfolio-production.up.railway.app/"
       },
       {
         "title": "Special Letter",
-        "description": "Fulstack project for people who want to write letters to themselves in the future. The server is on Node, the database is stored on Postgres. The client is written in React.",
+        "description": "Project for people who want to write letters to themselves in the future",
         "image": "/special-letter-icon.svg",
         "link": "https://special-letter-theta.vercel.app/"
       },
       {
         "title": "Cupid's Plan",
-        "description": "Multi-functional AI system designed to transform romantic date planning into an effortless, personalized experience.",
+        "description": "Multi-functional AI system designed to transform romantic date planning into personalized experience",
         "image": "/cupids-plan-icon.svg",
         "link": "https://agent.ai/profile/dream_date"
       },
       {
         "title": "Northchess",
-        "description": "Mobile chess game using Dart and Flutter, featuring smooth animations, move highlights, and special move handling.",
+        "description": "Mobile chess game, featuring smooth animations, move highlights, and special move handling",
         "image": "/northchess-icon.svg",
         "link": "https://northchess.netlify.app/"
       },
       {
         "title": "Water Tracker",
-        "description": "A website to monitor daily water consumption using Node.js and Express for the backend and React for the frontend.",
+        "description": "A website to monitor daily water consumption",
         "image": "/water-tracker-icon.svg",
         "link": "https://horodylova.github.io/project-AquaSquad/"
       },
       {
         "title": "WebStudio",
-        "description": "Responsive website layout as a solo developer using HTML, SASS, and JavaScript.",
+        "description": "Responsive website layout as a solo developer using HTML, SASS, and JavaScript",
         "image": "/webstudio-icon.svg",
         "link": "https://horodylova.github.io/goit-markup-hw-08/"
       },
       {
         "title": "IT-certification",
-        "description": "Service providing access to educational curricula.",
+        "description": "Service providing access to educational curricula",
         "image": "/it-certification-icon.svg",
         "link": "https://it-certification.vercel.app/"
       },
       {
         "title": "Bookshelf",
-        "description": "Responsive website using HTML, SASS, JS, and Parcel.",
+        "description": "Responsive website using HTML, SASS, JS, and Parcel",
         "image": "/bookshelf-icon.svg",
         "link": "https://irensmile.github.io/project-ScriptMasters14/"
       },
       {
         "title": "Ice Cream",
-        "description": "Basic e-commerce platform, implementing client communication, managing customer feedback, and creating a user-friendly contact form.",
+        "description": "Basic e-commerce platform, implementing client communication, managing customer feedback",
         "image": "/ice-cream-icon.svg",
         "link": "https://brugiiii.github.io/TheCodeFathers/"
       }
