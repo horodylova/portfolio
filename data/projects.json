@@ -7,6 +7,12 @@
         "link": "https://textbuddy-fawn.vercel.app/"
       },
       {
+        "title": "Beauty Salon",
+        "description": "A professional hair and makeup artist website",
+        "image": "/beauty_salon.jpg",
+        "link": "https://hairmakeupbyyvonne.com/"
+      },
+      {
         "title": "Interactive map with graphs",
         "description": "An interactive visualisation platform that combines geographical mapping with statistical data analysis.",
         "image": "/map.svg",
