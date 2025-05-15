@@ -2,7 +2,7 @@
     "projects": [
       {
         "title": "Text Buddy",
-        "description": "Text transformation from formal to conversational style. OPEN API operation.",
+        "description": "Text transformation from formal to conversational style",
         "image": "/text-buddy-icon.svg",
         "link": "https://textbuddy-fawn.vercel.app/"
       },
@@ -14,7 +14,7 @@
       },
       {
         "title": "Interactive map with graphs",
-        "description": "Visualisation platform that combines geographical mapping with statistical data analysis",
+        "description": "Geographical mapping with statistical data analysis",
         "image": "/map.svg",
         "link": "https://map-for-portfolio-production.up.railway.app/"
       },
@@ -26,13 +26,13 @@
       },
       {
         "title": "Cupid's Plan",
-        "description": "Multi-functional AI system designed to transform romantic date planning into personalized experience",
+        "description": "AI system that turns date planning into a personalised romantic experience",
         "image": "/cupids-plan-icon.svg",
         "link": "https://agent.ai/profile/dream_date"
       },
       {
         "title": "Northchess",
-        "description": "Mobile chess game, featuring smooth animations, move highlights, and special move handling",
+        "description": "Mobile chess game with smooth animations and special move support",
         "image": "/northchess-icon.svg",
         "link": "https://northchess.netlify.app/"
       },
@@ -44,7 +44,7 @@
       },
       {
         "title": "WebStudio",
-        "description": "Responsive website layout as a solo developer using HTML, SASS, and JavaScript",
+        "description": "Online shop with product cards",
         "image": "/webstudio-icon.svg",
         "link": "https://horodylova.github.io/goit-markup-hw-08/"
       },
@@ -56,13 +56,13 @@
       },
       {
         "title": "Bookshelf",
-        "description": "Responsive website using HTML, SASS, JS, and Parcel",
+        "description": "Responsive website",
         "image": "/bookshelf-icon.svg",
         "link": "https://irensmile.github.io/project-ScriptMasters14/"
       },
       {
         "title": "Ice Cream",
-        "description": "Basic e-commerce platform, implementing client communication, managing customer feedback",
+        "description": "E-commerce platform with client communication and customer feedback management",
         "image": "/ice-cream-icon.svg",
         "link": "https://brugiiii.github.io/TheCodeFathers/"
       }
