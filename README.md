@@ -25,6 +25,7 @@ A modern, responsive portfolio website built with Next.js and React, showcasing 
 
 - **Frontend**: React, Next.js, CSS Modules
 - **UI Components**: Kendo UI React Components
+- **Charts**: Rechart library
 - **Styling**: Custom CSS with CSS variables for theming
 - **Deployment**: Vercel
 - **Version Control**: Git, GitHub
