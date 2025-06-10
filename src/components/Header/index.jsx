@@ -92,7 +92,7 @@ export default function Header() {
               >
                 Svitlana
               </span>
-              <span className={styles.lastName}>H</span>
+              <span className={styles.lastName}>Horodylova</span>
             </span>
           </div>
         </div>
